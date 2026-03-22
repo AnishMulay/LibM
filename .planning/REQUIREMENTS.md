@@ -8,7 +8,7 @@
 ### Authentication
 
 - [ ] **AUTH-01**: User can log in with pre-created email + password credentials (no sign-up flow)
-- [ ] **AUTH-02**: Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced)
+- [x] **AUTH-02**: Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced)
 
 ### Library
 
@@ -52,7 +52,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Complete |
 | LIB-01 | Phase 2 | Pending |
 | LIB-02 | Phase 2 | Pending |
 | LIB-03 | Phase 2 | Pending |
