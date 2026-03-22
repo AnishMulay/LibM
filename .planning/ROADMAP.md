@@ -12,7 +12,7 @@ Three phases deliver the complete app: auth gates entry and enforces the two-use
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Auth** - Secure login for exactly two accounts, no sign-up flow
+- [x] **Phase 1: Auth** - Secure login for exactly two accounts, no sign-up flow (completed 2026-03-22)
 - [ ] **Phase 2: Library** - Visual bookshelf with spines, drag reorder, and manual book entry
 - [ ] **Phase 3: Wishlist & Detail** - Wishlist flow, move-to-library, book detail view, and cross-platform delivery
 
@@ -30,7 +30,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 Plans:
 - [x] 01-01-PLAN.md — Bootstrap Flutter project with Supabase integration and routing scaffold
-- [ ] 01-02-PLAN.md — Auth service, login UI, and RLS migration for two-user enforcement
+- [x] 01-02-PLAN.md — Auth service, login UI, and RLS migration for two-user enforcement
 **UI hint**: yes
 
 ### Phase 2: Library
@@ -64,6 +64,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Auth | 1/2 | In Progress|  |
+| 1. Auth | 2/2 | Complete   | 2026-03-22 |
 | 2. Library | 0/TBD | Not started | - |
 | 3. Wishlist & Detail | 0/TBD | Not started | - |
