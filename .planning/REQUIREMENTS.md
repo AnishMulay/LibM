@@ -51,21 +51,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | TBD | Pending |
-| AUTH-02 | TBD | Pending |
-| LIB-01 | TBD | Pending |
-| LIB-02 | TBD | Pending |
-| LIB-03 | TBD | Pending |
-| WISH-01 | TBD | Pending |
-| WISH-02 | TBD | Pending |
-| BOOK-01 | TBD | Pending |
-| PLAT-01 | TBD | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| LIB-01 | Phase 2 | Pending |
+| LIB-02 | Phase 2 | Pending |
+| LIB-03 | Phase 2 | Pending |
+| WISH-01 | Phase 3 | Pending |
+| WISH-02 | Phase 3 | Pending |
+| BOOK-01 | Phase 3 | Pending |
+| PLAT-01 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 9 total
-- Mapped to phases: 0
-- Unmapped: 9 ⚠️
+- Mapped to phases: 9
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-22*
-*Last updated: 2026-03-22 after initial definition*
+*Last updated: 2026-03-22 after roadmap creation*
