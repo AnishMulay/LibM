@@ -27,7 +27,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. User can log in with their pre-created email and password and reach the main app
   3. A third email/password combination is rejected at the database level via Supabase RLS — not just the UI
   4. Logging out returns the user to the login screen and clears their session
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Bootstrap Flutter project with Supabase integration and routing scaffold
+- [ ] 01-02-PLAN.md — Auth service, login UI, and RLS migration for two-user enforcement
 **UI hint**: yes
 
 ### Phase 2: Library
@@ -61,6 +64,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Auth | 0/TBD | Not started | - |
+| 1. Auth | 0/2 | Not started | - |
 | 2. Library | 0/TBD | Not started | - |
 | 3. Wishlist & Detail | 0/TBD | Not started | - |
