@@ -63,6 +63,17 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 | Manual drag reorder on bookshelf | Shelf should feel personal and curated, not algorithmically sorted | — Pending |
 | Neo-brutalist old-money aesthetic | App should feel like a physical object — a study shelf, not a CRUD app | — Pending |
 
+## Current Milestone: v1.0 Core Loop
+
+**Goal:** Ship the complete app — auth, visual bookshelf, wishlist, and book detail for two users across iOS and Android.
+
+**Target features:**
+- Auth: login screen, 2-account RLS enforcement
+- Library: visual bookshelf with spines, drag reorder, add books
+- Wishlist: she adds books, he can move them to library
+- Book detail: full detail view per book
+- Cross-platform: iOS (him) + Android (her) parity
+
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
@@ -81,4 +92,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after initialization*
+*Last updated: 2026-03-22 after milestone v1.0 started*
