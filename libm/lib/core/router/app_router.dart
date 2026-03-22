@@ -2,18 +2,20 @@ import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
 import '../../features/home/home_screen.dart';
+import '../../features/auth/login_screen.dart';
 
-// LoginScreen import will be added in Plan 02 — use a placeholder route for now
-// that simply shows a scaffold titled 'Login' until Plan 02 creates the real widget.
-class _LoginPlaceholder extends StatelessWidget {
-  const _LoginPlaceholder();
-  @override
-  Widget build(BuildContext context) =>
-      const Scaffold(body: Center(child: Text('Login')));
+// Converts Supabase's auth state stream into a Listenable for GoRouter.
+class _GoRouterRefreshStream extends ChangeNotifier {
+  _GoRouterRefreshStream() {
+    Supabase.instance.client.auth.onAuthStateChange.listen((_) {
+      notifyListeners();
+    });
+  }
 }
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/login',
+  refreshListenable: _GoRouterRefreshStream(),
   redirect: (context, state) {
     final session = Supabase.instance.client.auth.currentSession;
     final isLoggedIn = session != null;
@@ -26,7 +28,7 @@ final GoRouter appRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/login',
-      builder: (context, state) => const _LoginPlaceholder(),
+      builder: (context, state) => const LoginScreen(),
     ),
     GoRoute(
       path: '/home',
