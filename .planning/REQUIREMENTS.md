@@ -12,9 +12,9 @@
 
 ### Library
 
-- [ ] **LIB-01**: User sees all owned books as a visual bookshelf with book spines on wooden shelves
-- [ ] **LIB-02**: User can manually reorder books on the shelf via drag
-- [ ] **LIB-03**: User can add a book manually with title, author, cover (color or uploaded image), and optional notes/review
+- [x] **LIB-01**: User sees all owned books as a visual bookshelf with book spines on wooden shelves
+- [x] **LIB-02**: User can manually reorder books on the shelf via drag
+- [x] **LIB-03**: User can add a book manually with title, author, cover (color or uploaded image), and optional notes/review
 
 ### Wishlist
 
@@ -53,9 +53,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete |
-| LIB-01 | Phase 2 | Pending |
-| LIB-02 | Phase 2 | Pending |
-| LIB-03 | Phase 2 | Pending |
+| LIB-01 | Phase 2 | Complete |
+| LIB-02 | Phase 2 | Complete |
+| LIB-03 | Phase 2 | Complete |
 | WISH-01 | Phase 3 | Pending |
 | WISH-02 | Phase 3 | Pending |
 | BOOK-01 | Phase 3 | Pending |

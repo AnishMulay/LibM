@@ -44,7 +44,7 @@ Plans:
   4. User can drag a book spine to a new position on the shelf and the order persists after leaving and returning to the screen
 **Plans**: 4 plans
 Plans:
-- [ ] 02-01-PLAN.md — Foundation: AppColors, AppTextStyles, books migration, BookModel, BookService, reorderables dep
+- [x] 02-01-PLAN.md — Foundation: AppColors, AppTextStyles, books migration, BookModel, BookService, reorderables dep
 - [ ] 02-02-PLAN.md — LibraryScreen with ShelfWidget and BookSpineWidget; router wired to LibraryScreen
 - [ ] 02-03-PLAN.md — AddBookScreen with ColorPickerWidget, form validation, Supabase insert
 - [ ] 02-04-PLAN.md — Drag-reorder via ReorderableWrap; position persistence; human verification checkpoint
@@ -70,5 +70,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
-| 2. Library | 0/4 | Not started | - |
+| 2. Library | 1/4 | In Progress|  |
 | 3. Wishlist & Detail | 0/TBD | Not started | - |
