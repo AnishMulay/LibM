@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Phase 3 context gathered (discuss mode)
-last_updated: "2026-03-23T02:01:50.695Z"
+status: Ready to execute
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-23T02:29:06.395Z"
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 10
+  completed_plans: 7
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** She adds books she wants; he sees the wishlist, buys them, ships them, and moves them to the shelf — the app is the connective tissue of their shared reading life across distance.
-**Current focus:** Phase 02 — library
+**Current focus:** Phase 03 — wishlist-detail
 
 ## Current Position
 
-Phase: 3
-Plan: Not started
+Phase: 03 (wishlist-detail) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Plan: Not started
 | Phase 02-library P03 | 7 | 2 tasks | 3 files |
 | Phase 02-library P04 | 7min | 1 tasks | 2 files |
 | Phase 02-library P04 | 15 | 2 tasks | 2 files |
+| Phase 03-wishlist-detail P01 | 1 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,9 @@ Recent decisions affecting current work:
 - [Phase 02-library]: ReorderableWrap handles visual row wrapping automatically — no manual _chunk into rows needed
 - [Phase 02-library]: Optimistic UI: setState reorders _books immediately, updatePositions fires async without await
 - [Phase 02-library]: onTap removed from BookSpineWidget — tap navigation deferred to Phase 3 book detail view
+- [Phase 03-wishlist-detail]: GestureDetector wraps BookSpineWidget only when onTap is non-null — null path returns spine directly, existing callers unaffected
+- [Phase 03-wishlist-detail]: moveToLibrary uses fetchBooks() to determine nextPosition — same append-to-end pattern as addBook
+- [Phase 03-wishlist-detail]: spineAuthor fontSize 11 -> 14 completes 4-size type scale (48/32/16/14) consolidation
 
 ### Pending Todos
 
@@ -92,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T02:01:50.692Z
-Stopped at: Phase 3 context gathered (discuss mode)
-Resume file: .planning/phases/03-wishlist-detail/03-CONTEXT.md
+Last session: 2026-03-23T02:29:06.392Z
+Stopped at: Completed 03-01-PLAN.md
+Resume file: None

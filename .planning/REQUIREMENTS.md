@@ -18,12 +18,12 @@
 
 ### Wishlist
 
-- [ ] **WISH-01**: Wishlist view shows books she wants; only she can add to her wishlist
-- [ ] **WISH-02**: User can move a book from wishlist to library (marks it as arrived/owned)
+- [x] **WISH-01**: Wishlist view shows books she wants; only she can add to her wishlist
+- [x] **WISH-02**: User can move a book from wishlist to library (marks it as arrived/owned)
 
 ### Book Detail
 
-- [ ] **BOOK-01**: Each book has a detail view showing all its fields
+- [x] **BOOK-01**: Each book has a detail view showing all its fields
 
 ### Platform
 
@@ -56,9 +56,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LIB-01 | Phase 2 | Complete |
 | LIB-02 | Phase 2 | Complete |
 | LIB-03 | Phase 2 | Complete |
-| WISH-01 | Phase 3 | Pending |
-| WISH-02 | Phase 3 | Pending |
-| BOOK-01 | Phase 3 | Pending |
+| WISH-01 | Phase 3 | Complete |
+| WISH-02 | Phase 3 | Complete |
+| BOOK-01 | Phase 3 | Complete |
 | PLAT-01 | Phase 3 | Pending |
 
 **Coverage:**

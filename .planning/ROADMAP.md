@@ -61,7 +61,7 @@ Plans:
   4. The complete app builds and runs with full feature parity on his iOS device and her Android device
 **Plans**: 4 plans
 Plans:
-- [ ] 03-01-PLAN.md — BookService extensions (fetchWishlist, addWishlistBook, moveToLibrary) + BookSpineWidget onTap + typography fix
+- [x] 03-01-PLAN.md — BookService extensions (fetchWishlist, addWishlistBook, moveToLibrary) + BookSpineWidget onTap + typography fix
 - [ ] 03-02-PLAN.md — WishlistScreen + AddBookScreen extended for isWishlist
 - [ ] 03-03-PLAN.md — BookDetailScreen + router wiring for /wishlist, /book-detail, LibraryScreen spine taps
 - [ ] 03-04-PLAN.md — Cross-platform human verification checkpoint (iOS + Android)
@@ -76,4 +76,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
 | 2. Library | 4/4 | Complete   | 2026-03-23 |
-| 3. Wishlist & Detail | 0/4 | Not started | - |
+| 3. Wishlist & Detail | 1/4 | In Progress|  |
