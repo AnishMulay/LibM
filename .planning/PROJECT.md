@@ -20,14 +20,12 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Active
 - [ ] Books can use an uploaded image as cover (in addition to solid color)
-- [ ] Wishlist view shows books she wants (only she can add to her wishlist)
-- [ ] A book can be moved from wishlist to library (marks it as arrived/owned)
-- [ ] Each book has a detail view showing all its fields
-- [ ] App works on iOS (his) and Android (hers)
-- [ ] Wishlist view shows books she wants (only she can add to her wishlist)
-- [ ] A book can be moved from wishlist to library (marks it as arrived/owned)
-- [ ] Each book has a detail view showing all its fields
-- [ ] App works on iOS (his) and Android (hers)
+
+### Validated (Phase 03)
+- [x] Wishlist view shows books she wants (only she can add to her wishlist) — Validated in Phase 03: wishlist-detail
+- [x] A book can be moved from wishlist to library (marks it as arrived/owned) — Validated in Phase 03: wishlist-detail
+- [x] Each book has a detail view showing all its fields — Validated in Phase 03: wishlist-detail
+- [x] App works on iOS (his) and Android (hers) — Validated in Phase 03: wishlist-detail
 
 ### Out of Scope
 
@@ -95,4 +93,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-23 — Phase 02 (library) complete*
+*Last updated: 2026-03-23 — Phase 03 (wishlist-detail) complete — v1.0 core loop shipped*
