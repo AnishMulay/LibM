@@ -14,11 +14,16 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 - [x] User can log in with pre-created email + password credentials (no sign-up flow) — Validated in Phase 01: auth
 - [x] Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced) — Validated in Phase 01: auth
+- [x] Library view shows all owned books as a visual bookshelf — book spines on wooden shelves — Validated in Phase 02: library
+- [x] Books on the shelf can be manually reordered via drag — Validated in Phase 02: library
+- [x] Books are added manually with: title, author, cover (solid color from palette), and optional notes — Validated in Phase 02: library
 
 ### Active
-- [ ] Library view shows all owned books as a visual bookshelf — book spines on wooden shelves
-- [ ] Books on the shelf can be manually reordered via drag
-- [ ] Books are added manually with: title, author, cover (color or uploaded image), and optional notes/review
+- [ ] Books can use an uploaded image as cover (in addition to solid color)
+- [ ] Wishlist view shows books she wants (only she can add to her wishlist)
+- [ ] A book can be moved from wishlist to library (marks it as arrived/owned)
+- [ ] Each book has a detail view showing all its fields
+- [ ] App works on iOS (his) and Android (hers)
 - [ ] Wishlist view shows books she wants (only she can add to her wishlist)
 - [ ] A book can be moved from wishlist to library (marks it as arrived/owned)
 - [ ] Each book has a detail view showing all its fields
@@ -90,4 +95,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-23 — Phase 01 (auth) complete*
+*Last updated: 2026-03-23 — Phase 02 (library) complete*
