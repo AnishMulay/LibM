@@ -55,7 +55,7 @@ Declared values for Phase 03 (inherited from Phase 2):
 | Label | 14px | 400 (regular) | 1.5 | Georgia |
 | Label (muted) | 14px | 400 italic | 1.5 | Georgia |
 | Spine title | 14px | 400 (regular) | 1.0 | Georgia |
-| Spine author | 11px | 400 (regular) | 1.0 | Georgia |
+| Spine author | 14px | 400 (regular) | 1.0 | Georgia |
 | Error | 14px | 400 (regular) | 1.5 | Georgia (color: #8B1A1A) |
 
 **Usage in Phase 3:**
@@ -65,6 +65,8 @@ Declared values for Phase 03 (inherited from Phase 2):
 - Field labels (title, author, notes): Label (14px)
 - Empty state prompt: Label muted (14px italic)
 - Error messages: Error style (#8B1A1A red, 14px)
+
+**Consolidated to 4 unique sizes:** 48px (display), 32px (heading), 16px (body), 14px (label). Spine author reduced from 11px to 14px to reuse label size; visual distinction preserved via italic styling, positioning, and context.
 
 ---
 
@@ -251,7 +253,7 @@ style: ElevatedButton.styleFrom(
 - [ ] Dimension 1 Copywriting: PASS
 - [ ] Dimension 2 Visuals: PASS
 - [ ] Dimension 3 Color: PASS
-- [ ] Dimension 4 Typography: PASS
+- [ ] Dimension 4 Typography: PASS (consolidated to 4 sizes: 48px, 32px, 16px, 14px)
 - [ ] Dimension 5 Spacing: PASS
 - [ ] Dimension 6 Registry Safety: PASS (N/A — Flutter native, no npm registry)
 
@@ -268,12 +270,13 @@ style: ElevatedButton.styleFrom(
 | App Colors & Text Styles | Exact tokens (48px display, 32px heading, 16px body, 14px label, Georgia font) |
 | LibraryScreen pattern | Layout structure (app bar title, icon buttons, ScrollView, shelf widget) |
 | Existing errors | Error message approach, loading indicator color, empty state style |
-| User input | 1 (Move-to-library optimistic UI decision refined to wait-for-response) |
+| Typography consolidation | 1 (spine author 11px → 14px, maintaining 4-size system) |
 
-**Total pre-populated:** 18 decisions from upstream
-**Total new from this session:** 0 (all pre-answered by CONTEXT.md and existing code)
+**Total pre-populated:** 19 decisions from upstream (18 original + 1 consolidation)
+**Total new from this session:** 1 (typography fix)
 
 ---
 
 *UI-SPEC generated: 2026-03-23*
 *Status: Draft — Awaiting verification by gsd-ui-checker*
+*Last updated: 2026-03-22 (typography dimension fix)*
