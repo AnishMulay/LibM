@@ -71,6 +71,11 @@ class _LibraryScreenState extends State<LibraryScreen> {
         title: Text('Library', style: AppTextStyles.heading),
         actions: [
           IconButton(
+            icon: const Icon(Icons.favorite_border),
+            tooltip: 'Wishlist',
+            onPressed: () => context.push('/wishlist'),
+          ),
+          IconButton(
             icon: const Icon(Icons.add),
             tooltip: 'Add Book',
             onPressed: () async {
@@ -114,7 +119,11 @@ class _LibraryScreenState extends State<LibraryScreen> {
         runSpacing: 32, // visual gap between shelf rows
         onReorder: _handleReorder,
         children: _books
-            .map((b) => BookSpineWidget(key: ValueKey(b.id), book: b))
+            .map((b) => BookSpineWidget(
+                  key: ValueKey(b.id),
+                  book: b,
+                  onTap: () => context.push('/book-detail', extra: b),
+                ))
             .toList(),
       ),
     );

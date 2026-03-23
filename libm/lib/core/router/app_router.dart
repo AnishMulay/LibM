@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import '../../features/library/library_screen.dart';
 import '../../features/auth/login_screen.dart';
 import '../../features/library/add_book_screen.dart';
+import '../../features/library/book_detail_screen.dart';
+import '../../features/library/book_model.dart';
+import '../../features/wishlist/wishlist_screen.dart';
 
 // Converts Supabase's auth state stream into a Listenable for GoRouter.
 class _GoRouterRefreshStream extends ChangeNotifier {
@@ -36,8 +39,23 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const LibraryScreen(),
     ),
     GoRoute(
+      path: '/wishlist',
+      builder: (context, state) => const WishlistScreen(),
+    ),
+    GoRoute(
       path: '/add-book',
-      builder: (context, state) => const AddBookScreen(),
+      builder: (context, state) {
+        final extra = state.extra as Map<String, dynamic>?;
+        final isWishlist = extra?['isWishlist'] as bool? ?? false;
+        return AddBookScreen(isWishlist: isWishlist);
+      },
+    ),
+    GoRoute(
+      path: '/book-detail',
+      builder: (context, state) {
+        final book = state.extra as BookModel;
+        return BookDetailScreen(book: book);
+      },
     ),
   ],
 );
