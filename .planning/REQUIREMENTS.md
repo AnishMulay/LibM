@@ -27,7 +27,7 @@
 
 ### Platform
 
-- [ ] **PLAT-01**: App runs on iOS (his device) and Android (her device) with full parity
+- [x] **PLAT-01**: App runs on iOS (his device) and Android (her device) with full parity
 
 ## Future Requirements
 
@@ -59,7 +59,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WISH-01 | Phase 3 | Complete |
 | WISH-02 | Phase 3 | Complete |
 | BOOK-01 | Phase 3 | Complete |
-| PLAT-01 | Phase 3 | Pending |
+| PLAT-01 | Phase 3 | Complete |
 
 **Coverage:**
 - v1 requirements: 9 total
