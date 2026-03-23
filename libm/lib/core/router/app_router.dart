@@ -1,8 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
-import '../../features/home/home_screen.dart';
+import '../../features/library/library_screen.dart';
 import '../../features/auth/login_screen.dart';
+import '../../features/library/add_book_screen.dart';
 
 // Converts Supabase's auth state stream into a Listenable for GoRouter.
 class _GoRouterRefreshStream extends ChangeNotifier {
@@ -32,7 +33,11 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const LibraryScreen(),
+    ),
+    GoRoute(
+      path: '/add-book',
+      builder: (context, state) => const AddBookScreen(),
     ),
   ],
 );
