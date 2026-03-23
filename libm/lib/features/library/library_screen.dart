@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:reorderables/reorderables.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
@@ -50,13 +51,13 @@ class _LibraryScreenState extends State<LibraryScreen> {
     }
   }
 
-  /// Split a flat list into chunks of [size].
-  List<List<T>> _chunk<T>(List<T> list, int size) {
-    final chunks = <List<T>>[];
-    for (var i = 0; i < list.length; i += size) {
-      chunks.add(list.sublist(i, (i + size).clamp(0, list.length)));
-    }
-    return chunks;
+  void _handleReorder(int oldIndex, int newIndex) {
+    setState(() {
+      final book = _books.removeAt(oldIndex);
+      _books.insert(newIndex, book);
+    });
+    // Persist to Supabase asynchronously (don't await — optimistic UI)
+    _bookService.updatePositions(_books.map((b) => b.id).toList());
   }
 
   @override
@@ -106,18 +107,15 @@ class _LibraryScreenState extends State<LibraryScreen> {
       );
     }
 
-    final rows = _chunk(_books, 6);
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      child: Column(
-        children: rows.map((row) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 24),
-            child: ShelfWidget(
-              children: row.map((b) => BookSpineWidget(book: b)).toList(),
-            ),
-          );
-        }).toList(),
+      child: ReorderableWrap(
+        spacing: 4,
+        runSpacing: 32, // visual gap between shelf rows
+        onReorder: _handleReorder,
+        children: _books
+            .map((b) => BookSpineWidget(key: ValueKey(b.id), book: b))
+            .toList(),
       ),
     );
   }
