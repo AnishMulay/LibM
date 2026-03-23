@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Auth** - Secure login for exactly two accounts, no sign-up flow (completed 2026-03-22)
 - [x] **Phase 2: Library** - Visual bookshelf with spines, drag reorder, and manual book entry (completed 2026-03-23)
-- [ ] **Phase 3: Wishlist & Detail** - Wishlist flow, move-to-library, book detail view, and cross-platform delivery
+- [x] **Phase 3: Wishlist & Detail** - Wishlist flow, move-to-library, book detail view, and cross-platform delivery (completed 2026-03-23)
 
 ## Phase Details
 
@@ -64,7 +64,7 @@ Plans:
 - [x] 03-01-PLAN.md — BookService extensions (fetchWishlist, addWishlistBook, moveToLibrary) + BookSpineWidget onTap + typography fix
 - [x] 03-02-PLAN.md — WishlistScreen + AddBookScreen extended for isWishlist
 - [x] 03-03-PLAN.md — BookDetailScreen + router wiring for /wishlist, /book-detail, LibraryScreen spine taps
-- [ ] 03-04-PLAN.md — Cross-platform human verification checkpoint (iOS + Android)
+- [x] 03-04-PLAN.md — Cross-platform human verification checkpoint (iOS + Android)
 **UI hint**: yes
 
 ## Progress
@@ -76,4 +76,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
 | 2. Library | 4/4 | Complete   | 2026-03-23 |
-| 3. Wishlist & Detail | 3/4 | In Progress|  |
+| 3. Wishlist & Detail | 4/4 | Complete   | 2026-03-23 |
