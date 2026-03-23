@@ -39,10 +39,15 @@ Plans:
 **Requirements**: LIB-01, LIB-02, LIB-03
 **Success Criteria** (what must be TRUE):
   1. The library screen renders books as spines on wooden shelves in the neo-brutalist old-money aesthetic
-  2. User can add a book by entering title, author, a cover (solid colour from palette or uploaded image), and optional notes/review
+  2. User can add a book by entering title, author, a cover (solid colour from palette), and optional notes/review
   3. A newly added book appears on the shelf immediately after saving
   4. User can drag a book spine to a new position on the shelf and the order persists after leaving and returning to the screen
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 02-01-PLAN.md — Foundation: AppColors, AppTextStyles, books migration, BookModel, BookService, reorderables dep
+- [ ] 02-02-PLAN.md — LibraryScreen with ShelfWidget and BookSpineWidget; router wired to LibraryScreen
+- [ ] 02-03-PLAN.md — AddBookScreen with ColorPickerWidget, form validation, Supabase insert
+- [ ] 02-04-PLAN.md — Drag-reorder via ReorderableWrap; position persistence; human verification checkpoint
 **UI hint**: yes
 
 ### Phase 3: Wishlist & Detail
@@ -65,5 +70,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
-| 2. Library | 0/TBD | Not started | - |
+| 2. Library | 0/4 | Not started | - |
 | 3. Wishlist & Detail | 0/TBD | Not started | - |
