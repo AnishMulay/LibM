@@ -54,11 +54,11 @@ Exceptions:
 | Display (app title) | 48px | bold (700) | 1.2 |
 | Heading (screen title) | 32px | bold (700) | 1.2 |
 | Body (field labels, spine text) | 16px | regular (400) | 1.5 |
-| Label (form labels, small text) | 14px | regular (400) | 1.4 |
-| Error message | 13px | regular (400) | 1.4 |
-| Subtitle (tagline, empty state prompt) | 14px | italic (400) | 1.4 |
+| Label/Subtitle/Error | 14px | regular (400) | 1.4 |
 
 **Font Family:** Georgia (serif) throughout. No system fonts.
+
+**Consolidation note:** 14px font size consolidates three previously separate roles: form field labels, italic subtitles (empty state prompt, taglines), and error messages. All use 14px weight 400 for visual consistency.
 
 ---
 
@@ -72,7 +72,7 @@ Exceptions:
 | Destructive | `0xFF8B1A1A` (Dark Red) | Error messages, destructive action warnings (future: delete book confirmation) |
 
 **Accent reserved for:**
-- "Add book" button (primary CTA)
+- "Save Book" button (primary CTA)
 - Input field focus border (mirrored from LoginScreen)
 - Drag-reorder visual feedback (if needed)
 
@@ -92,27 +92,32 @@ Exceptions:
 
 ## Copywriting Contract
 
-| Element | Copy |
-|---------|------|
-| Primary CTA (app bar button) | "+" (icon button, no label) |
-| Primary CTA (add book flow) | "Save" (ElevatedButton on AddBookScreen) |
-| Screen title | "Library" |
-| Empty state heading | (icon + text on single empty shelf) |
-| Empty state body | "Add your first book" (italic, Georgia, old-money tone) |
-| Field label: Title | "Title" |
-| Field label: Author | "Author" |
-| Field label: Cover | "Cover Colour" |
-| Field label: Notes/Review | "Notes (optional)" |
-| Save button label | "Save" |
-| Cancel/Back navigation | Standard platform back gesture + GoRouter pop |
-| Error state (failed add) | "Error saving book. Please try again." (red text, Color(0xFF8B1A1A)) |
-| Loading state (fetching books) | Skeleton or centered loading spinner (no specific text required) |
+| Element | Copy | Accessibility Label |
+|---------|------|-------------------|
+| Primary CTA (app bar button) | "+" (icon button) | "Add Book" |
+| Primary CTA (add book form) | "Save Book" (ElevatedButton on AddBookScreen) | N/A (button text is semantic) |
+| Screen title | "Library" | N/A |
+| Empty state heading | (icon + text on single empty shelf) | N/A |
+| Empty state body | "Add your first book" (italic, Georgia, old-money tone) | N/A |
+| Field label: Title | "Title" | N/A |
+| Field label: Author | "Author" | N/A |
+| Field label: Cover | "Cover Colour" | N/A |
+| Field label: Notes/Review | "Notes (optional)" | N/A |
+| Cancel/Back navigation | Standard platform back gesture + GoRouter pop | N/A |
+| Error state (failed add) | "Error saving book. Please try again." (14px, weight 400, color 0xFF8B1A1A) | N/A (error text is explicit, no icon-only message) |
+| Loading state (fetching books) | Skeleton or centered loading spinner (no specific text required) | N/A |
 
 **Tone:** Formal, old-money aesthetic. Minimal, deliberate language. No casual phrasing.
 
 ---
 
 ## Visual Specifications
+
+### Focal Points
+
+**LibraryScreen (main shelf view):**
+- **Primary focal point:** The wooden shelf grid with book spines — users' eyes are naturally drawn to the inventory of books. The shelf metaphor is the central visual anchor.
+- **Secondary focal point:** The "+" button in the app bar (top-right corner) — the entry point for adding new books. Rendered in Forest Green accent color to draw attention as a secondary action.
 
 ### Shelf Design (D-01 to D-05)
 
@@ -142,7 +147,7 @@ Exceptions:
 
 **Entry Point:**
 - Floating action button removed (not using FAB)
-- App bar "+" button (icon button, no label) in top-right corner
+- App bar "+" button (icon button with accessibility label "Add Book") in top-right corner
 - Tapping navigates to `/add-book` route (GoRouter, full-screen presentation)
 
 **AddBookScreen Layout:**
@@ -154,7 +159,7 @@ Exceptions:
   - Cover Colour (8-swatch colour picker, displayed as tappable square swatches, ~50x50px each, with border on selected swatch)
   - Notes/Review (TextField, label "Notes (optional)", multiline, white background, 2px black87 border, BorderRadius.zero)
 - Buttons at bottom:
-  - Save (ElevatedButton, backgroundColor forestGreen, white text, "Save", 2px black87 border, BorderRadius.zero, height 52px)
+  - Save Book (ElevatedButton, backgroundColor forestGreen, white text, "Save Book", 2px black87 border, BorderRadius.zero, height 52px)
   - Back/Cancel: Standard platform back navigation (GoRouter pop)
 
 **Form validation:** TBD during planning (placeholder: required fields are Title + Author; Cover has default selection)
@@ -208,9 +213,10 @@ Exceptions:
 ## Accessibility Requirements
 
 - Icon button size: minimum 44x44px touch target
+- Icon button accessibility: All icon buttons must have semantic labels (e.g., the "+" button has label "Add Book")
 - Text contrast: 4.5:1 for body text on parchment background (parchment #F5F0E8 on black87 text meets WCAG AA)
 - Form labels: associated with inputs via TextField label property
-- Error messages: displayed in red (#8B1A1A) with explicit text, not icon-only
+- Error messages: displayed in red (#8B1A1A) with explicit text at 14px weight 400, not icon-only
 - Colour picker: tappable swatches must be large enough (50x50px minimum) and have focus/selected states visible beyond colour alone
 
 ---
