@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to execute
-stopped_at: Completed 02-library-03-PLAN.md
-last_updated: "2026-03-23T01:06:04.868Z"
+status: Phase complete — ready for verification
+stopped_at: "Checkpoint 02-04: awaiting human verification of Phase 2 library feature"
+last_updated: "2026-03-23T01:16:49.312Z"
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -51,6 +51,7 @@ Plan: 4 of 4
 | Phase 02-library P01 | 2 | 3 tasks | 6 files |
 | Phase 02-library P02 | 8 | 2 tasks | 4 files |
 | Phase 02-library P03 | 7 | 2 tasks | 3 files |
+| Phase 02-library P04 | 7min | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase 02-library]: RotatedBox(quarterTurns: 1) for 90deg spine text; books chunked into rows of 6 per shelf; children param placed after isEmpty in ShelfWidget calls for lint compliance
 - [Phase 02-library]: Color.toARGB32() used for hex extraction in Flutter 3.41 — Color.value deprecated
 - [Phase 02-library]: Default cover swatch is Forest Green (index 1) — Parchment (index 0) invisible on parchment background
+- [Phase 02-library]: ReorderableWrap handles visual row wrapping automatically — no manual _chunk into rows needed
+- [Phase 02-library]: Optimistic reorder UI: setState reorders _books immediately, updatePositions fires async without await
+- [Phase 02-library]: onTap removed from BookSpineWidget — tap navigation deferred to Phase 3 book detail view
 
 ### Pending Todos
 
@@ -84,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T01:06:04.866Z
-Stopped at: Completed 02-library-03-PLAN.md
+Last session: 2026-03-23T01:16:49.310Z
+Stopped at: Checkpoint 02-04: awaiting human verification of Phase 2 library feature
 Resume file: None

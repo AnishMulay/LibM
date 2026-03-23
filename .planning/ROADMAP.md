@@ -13,7 +13,7 @@ Three phases deliver the complete app: auth gates entry and enforces the two-use
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Auth** - Secure login for exactly two accounts, no sign-up flow (completed 2026-03-22)
-- [ ] **Phase 2: Library** - Visual bookshelf with spines, drag reorder, and manual book entry
+- [x] **Phase 2: Library** - Visual bookshelf with spines, drag reorder, and manual book entry (completed 2026-03-23)
 - [ ] **Phase 3: Wishlist & Detail** - Wishlist flow, move-to-library, book detail view, and cross-platform delivery
 
 ## Phase Details
@@ -47,7 +47,7 @@ Plans:
 - [x] 02-01-PLAN.md — Foundation: AppColors, AppTextStyles, books migration, BookModel, BookService, reorderables dep
 - [x] 02-02-PLAN.md — LibraryScreen with ShelfWidget and BookSpineWidget; router wired to LibraryScreen
 - [x] 02-03-PLAN.md — AddBookScreen with ColorPickerWidget, form validation, Supabase insert
-- [ ] 02-04-PLAN.md — Drag-reorder via ReorderableWrap; position persistence; human verification checkpoint
+- [x] 02-04-PLAN.md — Drag-reorder via ReorderableWrap; position persistence; human verification checkpoint
 **UI hint**: yes
 
 ### Phase 3: Wishlist & Detail
@@ -70,5 +70,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
-| 2. Library | 3/4 | In Progress|  |
+| 2. Library | 4/4 | Complete   | 2026-03-23 |
 | 3. Wishlist & Detail | 0/TBD | Not started | - |
