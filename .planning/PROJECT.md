@@ -12,12 +12,10 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] User can log in with pre-created email + password credentials (no sign-up flow) — Validated in Phase 01: auth
+- [x] Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced) — Validated in Phase 01: auth
 
 ### Active
-
-- [ ] User can log in with pre-created email + password credentials (no sign-up flow)
-- [ ] Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced)
 - [ ] Library view shows all owned books as a visual bookshelf — book spines on wooden shelves
 - [ ] Books on the shelf can be manually reordered via drag
 - [ ] Books are added manually with: title, author, cover (color or uploaded image), and optional notes/review
@@ -92,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after milestone v1.0 started*
+*Last updated: 2026-03-23 — Phase 01 (auth) complete*
