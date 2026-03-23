@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-23T02:29:06.395Z"
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-03-23T02:32:13.249Z"
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 10
-  completed_plans: 7
+  completed_plans: 8
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 03 (wishlist-detail) — EXECUTING
-Plan: 2 of 4
+Plan: 3 of 4
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Plan: 2 of 4
 | Phase 02-library P04 | 7min | 1 tasks | 2 files |
 | Phase 02-library P04 | 15 | 2 tasks | 2 files |
 | Phase 03-wishlist-detail P01 | 1 | 2 tasks | 3 files |
+| Phase 03-wishlist-detail P02 | 5min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,8 @@ Recent decisions affecting current work:
 - [Phase 03-wishlist-detail]: GestureDetector wraps BookSpineWidget only when onTap is non-null — null path returns spine directly, existing callers unaffected
 - [Phase 03-wishlist-detail]: moveToLibrary uses fetchBooks() to determine nextPosition — same append-to-end pattern as addBook
 - [Phase 03-wishlist-detail]: spineAuthor fontSize 11 -> 14 completes 4-size type scale (48/32/16/14) consolidation
+- [Phase 03-wishlist-detail]: Her UID hardcoded as const in WishlistScreen — runtime check against currentUser.id gates the add button; UID is fixed per RLS migration
+- [Phase 03-wishlist-detail]: AddBookScreen.isWishlist defaults false — existing /add-book route unchanged; GoRouter extra wiring deferred to Plan 03
 
 ### Pending Todos
 
@@ -96,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T02:29:06.392Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-03-23T02:32:13.247Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
