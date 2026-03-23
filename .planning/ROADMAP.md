@@ -59,7 +59,12 @@ Plans:
   2. He can tap a wishlist book and move it to the library in one action, removing it from the wishlist
   3. Tapping any book (on shelf or wishlist) opens a detail view showing all its fields
   4. The complete app builds and runs with full feature parity on his iOS device and her Android device
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 03-01-PLAN.md — BookService extensions (fetchWishlist, addWishlistBook, moveToLibrary) + BookSpineWidget onTap + typography fix
+- [ ] 03-02-PLAN.md — WishlistScreen + AddBookScreen extended for isWishlist
+- [ ] 03-03-PLAN.md — BookDetailScreen + router wiring for /wishlist, /book-detail, LibraryScreen spine taps
+- [ ] 03-04-PLAN.md — Cross-platform human verification checkpoint (iOS + Android)
 **UI hint**: yes
 
 ## Progress
@@ -71,4 +76,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Auth | 2/2 | Complete   | 2026-03-22 |
 | 2. Library | 4/4 | Complete   | 2026-03-23 |
-| 3. Wishlist & Detail | 0/TBD | Not started | - |
+| 3. Wishlist & Detail | 0/4 | Not started | - |
