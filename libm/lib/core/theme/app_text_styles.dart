@@ -59,7 +59,7 @@ abstract class AppTextStyles {
 
   static const TextStyle spineAuthor = TextStyle(
     fontFamily: _font,
-    fontSize: 11,
+    fontSize: 14,        // was 11 — consolidated to 4-size system per UI-SPEC
     fontWeight: FontWeight.w400,
     color: Colors.black54,
   );

@@ -4,8 +4,9 @@ import '../book_model.dart';
 
 class BookSpineWidget extends StatelessWidget {
   final BookModel book;
+  final VoidCallback? onTap;
 
-  const BookSpineWidget({super.key, required this.book});
+  const BookSpineWidget({super.key, required this.book, this.onTap});
 
   Color _parseHex(String hex) {
     final cleaned = hex.replaceAll('#', '');
@@ -15,7 +16,7 @@ class BookSpineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    final spine = Material(
       color: Colors.transparent,
       child: SizedBox(
         width: 56,
@@ -51,5 +52,8 @@ class BookSpineWidget extends StatelessWidget {
         ),
       ),
     );
+
+    if (onTap == null) return spine;
+    return GestureDetector(onTap: onTap, child: spine);
   }
 }
