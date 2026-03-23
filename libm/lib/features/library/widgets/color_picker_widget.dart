@@ -13,7 +13,7 @@ class ColorPickerWidget extends StatelessWidget {
   });
 
   String _toHex(Color color) {
-    return '#${(color.value & 0xFFFFFF).toRadixString(16).padLeft(6, '0').toUpperCase()}';
+    return '#${(color.toARGB32() & 0xFFFFFF).toRadixString(16).padLeft(6, '0').toUpperCase()}';
   }
 
   @override
@@ -27,7 +27,7 @@ class ColorPickerWidget extends StatelessWidget {
           spacing: 8,
           runSpacing: 8,
           children: AppColors.coverSwatches.map((color) {
-            final isSelected = color.value == selectedColor.value;
+            final isSelected = color.toARGB32() == selectedColor.toARGB32();
             return GestureDetector(
               onTap: () => onColorChanged(_toHex(color)),
               child: Container(
