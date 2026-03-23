@@ -6,7 +6,8 @@ import 'book_service.dart';
 import 'widgets/color_picker_widget.dart';
 
 class AddBookScreen extends StatefulWidget {
-  const AddBookScreen({super.key});
+  final bool isWishlist;
+  const AddBookScreen({super.key, this.isWishlist = false});
 
   @override
   State<AddBookScreen> createState() => _AddBookScreenState();
@@ -63,14 +64,25 @@ class _AddBookScreenState extends State<AddBookScreen> {
     setState(() => _loading = true);
 
     try {
-      await _bookService.addBook(
-        title: _titleController.text.trim(),
-        author: _authorController.text.trim(),
-        coverColor: _toHex(_selectedColor),
-        notes: _notesController.text.trim().isEmpty
-            ? null
-            : _notesController.text.trim(),
-      );
+      if (widget.isWishlist) {
+        await _bookService.addWishlistBook(
+          title: _titleController.text.trim(),
+          author: _authorController.text.trim(),
+          coverColor: _toHex(_selectedColor),
+          notes: _notesController.text.trim().isEmpty
+              ? null
+              : _notesController.text.trim(),
+        );
+      } else {
+        await _bookService.addBook(
+          title: _titleController.text.trim(),
+          author: _authorController.text.trim(),
+          coverColor: _toHex(_selectedColor),
+          notes: _notesController.text.trim().isEmpty
+              ? null
+              : _notesController.text.trim(),
+        );
+      }
       if (mounted) context.pop();
     } catch (_) {
       setState(() {
@@ -94,7 +106,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
     return Scaffold(
       backgroundColor: AppColors.parchment,
       appBar: AppBar(
-        title: Text('Add Book', style: AppTextStyles.heading),
+        title: Text(widget.isWishlist ? 'Add to Wishlist' : 'Add Book', style: AppTextStyles.heading),
         backgroundColor: AppColors.parchment,
         elevation: 0,
         foregroundColor: Colors.black87,
