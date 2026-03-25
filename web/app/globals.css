@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color tokens */
+  --color-parchment: #F5F0E8;
+  --color-forest-green: #2D4A3E;
+  --color-dark-red: #8B1A1A;
+  --color-text-primary: #222222;
+  --color-text-secondary: #666666;
+  --color-border: #000000;
+
+  /* Spacing tokens */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Input/button height */
+  --height-input: 52px;
+}
+
+/* Global resets for old-money neo-brutalist aesthetic */
+* {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #222222;
+  background-color: #F5F0E8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove default input/button browser styling */
+input, button, textarea, select {
+  font-family: inherit;
+  border-radius: 0;
+}
