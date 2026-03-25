@@ -42,7 +42,7 @@ Full phase details: `.planning/milestones/v1.0-ROADMAP.md`
 
 Plans:
 - [x] 04-01-PLAN.md — Scaffold Next.js 14 in web/ with Tailwind design tokens and global layout
-- [ ] 04-02-PLAN.md — Supabase @supabase/ssr client factories + login page UI
+- [x] 04-02-PLAN.md — Supabase @supabase/ssr client factories + login page UI
 - [ ] 04-03-PLAN.md — Next.js middleware for route protection (AUTH-04)
 
 **UI hint**: yes
@@ -91,7 +91,7 @@ Plans:
 | 1. Auth | v1.0 | 2/2 | Complete | 2026-03-22 |
 | 2. Library | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
-| 4. Setup & Auth | v2.0 | 0/3 | Not started | - |
+| 4. Setup & Auth | v2.0 | 2/3 | In Progress|  |
 | 5. Bookshelf UI Components | v2.0 | 0/? | Not started | - |
 | 6. Library + Add Book | v2.0 | 0/? | Not started | - |
 | 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
