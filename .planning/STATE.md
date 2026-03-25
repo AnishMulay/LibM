@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
 status: planning
-stopped_at: Phase 4 context gathered
-last_updated: "2026-03-25T23:03:00.317Z"
+stopped_at: Phase 4 UI-SPEC approved
+last_updated: "2026-03-25T23:08:01.573Z"
 last_activity: 2026-03-25 — Roadmap created for v2.0 milestone
 progress:
   total_phases: 4
@@ -69,6 +69,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-25T23:03:00.314Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-setup-auth/04-CONTEXT.md
+Last session: 2026-03-25T23:08:01.570Z
+Stopped at: Phase 4 UI-SPEC approved
+Resume file: .planning/phases/04-setup-auth/04-UI-SPEC.md
