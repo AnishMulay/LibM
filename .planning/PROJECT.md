@@ -33,10 +33,10 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 - ✓ A book can be moved from wishlist to library (marks it as arrived/owned) — v1.0
 - ✓ Each book has a detail view showing all its fields — v1.0
 - ✓ App works on iOS (his) and Android (hers) — v1.0
+- ✓ User can log in with pre-created email + password credentials (no sign-up flow) — web — Validated in Phase 04: setup-auth
 
 ### Active
 
-- [ ] User can log in with pre-created email + password credentials (no sign-up flow) — web
 - [ ] Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines
 - [ ] Books on the shelf can be manually reordered via drag
 - [ ] Books are added manually with: title, author, cover color swatch (8 old-money colors), and optional notes
@@ -113,4 +113,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-25 after v2.0 milestone start*
+*Last updated: 2026-03-25 — Phase 04 (setup-auth) complete*
