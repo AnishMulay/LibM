@@ -41,7 +41,7 @@ Full phase details: `.planning/milestones/v1.0-ROADMAP.md`
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Scaffold Next.js 14 in web/ with Tailwind design tokens and global layout
+- [x] 04-01-PLAN.md — Scaffold Next.js 14 in web/ with Tailwind design tokens and global layout
 - [ ] 04-02-PLAN.md — Supabase @supabase/ssr client factories + login page UI
 - [ ] 04-03-PLAN.md — Next.js middleware for route protection (AUTH-04)
 
