@@ -1,8 +1,20 @@
 # LibM
 
+## Current Milestone: v2.0 Next.js Rebuild
+
+**Goal:** Rebuild LibM as a Next.js web app with exact feature parity to the Flutter app, keeping the Supabase backend intact.
+
+**Target features:**
+- Auth: email + password login, two fixed accounts, no sign-up flow
+- Library screen: visual wooden bookshelf with fixed-width book spines (rotated title/author, old-money palette, drag reorder)
+- Add Book screen: full-page form with title, author, color swatch picker (8 muted old-money colors)
+- Wishlist screen: same shelf visual, no drag reorder, add button gated to her UID
+- Book Detail view: read-only (title, author, color swatch, notes)
+- Move to Library: one-tap action from wishlist book detail (for him)
+
 ## What This Is
 
-A private Flutter mobile app (iOS + Android) for two people — a shared home library for a couple in a long-distance relationship. It holds their shared book collection on a visual bookshelf, lets her curate a wishlist so he knows what to buy and ship, and gives every book a clean detail view. No one else can ever access it.
+A private web app (Next.js) for two people — a shared home library for a couple in a long-distance relationship. It holds their shared book collection on a visual bookshelf, lets her curate a wishlist so he knows what to buy and ship, and gives every book a clean detail view. No one else can ever access it. Rebuilt from Flutter to Next.js in v2.0; Supabase backend unchanged.
 
 ## Core Value
 
@@ -24,39 +36,48 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Active
 
-- [ ] Books can use an uploaded image as cover (in addition to solid color swatch)
+- [ ] User can log in with pre-created email + password credentials (no sign-up flow) — web
+- [ ] Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines
+- [ ] Books on the shelf can be manually reordered via drag
+- [ ] Books are added manually with: title, author, cover color swatch (8 old-money colors), and optional notes
+- [ ] Wishlist screen shows books she wants; only she can add to it (UID gate)
+- [ ] A book can be moved from wishlist to library from the book detail view
+- [ ] Each book has a read-only detail view showing all its fields
+- [ ] App is deployed on Vercel and accessible via web browser
 
 ### Out of Scope
 
 - Sign-up / account creation flow — two accounts are pre-created in Supabase, period
 - Social features, public sharing, or any third-party visibility — intentionally private
 - Recommendations engine — this is a personal shelf, not a discovery app
-- Reading status tracking (unread/reading/read) — not needed for v1
+- Reading status tracking (unread/reading/read) — not in scope
 - "Who owns it" field — not tracking physical location per book
 - ISBN / barcode scanning — manual entry only
-- Web app or desktop — mobile only
+- Image upload for book covers — color swatches only in v2.0
+- Native mobile app — web-first now; Flutter app retired
 
 ## Context
 
-**Shipped v1.0 with 1,407 LOC Dart. 116 files, 10 plans across 3 phases.**
+**v1.0 shipped as Flutter app (1,407 LOC Dart, 116 files, 10 plans, 3 phases). v2.0 is a full frontend rebuild in Next.js — Supabase backend unchanged.**
 
-Tech stack: Flutter (Dart) + Supabase (auth + database + RLS) + GoRouter + flutter_dotenv + reorderables.
+New tech stack: Next.js 14 (App Router) + Tailwind CSS + Supabase JS client, deployed on Vercel.
 
-Long-distance couple: he's on iOS, she's on Android — cross-platform parity confirmed on physical devices.
+Long-distance couple: he uses the web app on his device, she uses it on hers. Browser-based, no native install required.
 
 The wishlist is a gifting signal: she adds what she wants, he checks it when buying gifts to ship to her.
 
-The bookshelf aesthetic is neo-brutalist old-money: parchment/cream backgrounds, forest green/burgundy/navy/aged gold, thick black borders, bold Georgia serif, no rounded corners, no Material defaults.
+The bookshelf aesthetic is neo-brutalist old-money: parchment/cream backgrounds, forest green/burgundy/navy/aged gold, thick black borders, bold Georgia serif, no rounded corners, no shadows. Should feel like a wood-paneled study shelf.
 
-Auth is intentionally minimal: two pre-created Supabase accounts, login screen only, RLS locks data to those two UIDs forever.
+Auth is intentionally minimal: two pre-created Supabase accounts, login page only, RLS locks data to those two UIDs forever.
 
 ## Constraints
 
-- **Tech Stack**: Flutter (Dart) + Supabase — no alternatives considered
-- **Auth**: Email + password only, two pre-created accounts, no OAuth, no magic links
-- **Security**: Supabase Row Level Security must prevent any third account from reading or writing data — this is non-negotiable
-- **Platform**: iOS + Android (Flutter handles cross-platform; no web target)
-- **Scope**: Core loop shipped. Next expansion should be scoped to a new milestone.
+- **Tech Stack**: Next.js 14 (App Router) + Tailwind CSS + Supabase JS — replacing Flutter
+- **Backend**: Supabase (auth, database, RLS) unchanged — frontend rebuild only
+- **Auth**: Email + password only, two pre-created accounts, no OAuth, no magic links, no sign-up
+- **Security**: Supabase Row Level Security must prevent any third account from reading or writing data — non-negotiable
+- **Deployment**: Vercel — environment variables replace flutter_dotenv
+- **Scope**: Exact feature parity with Flutter v1.0; no new features in v2.0
 
 ## Key Decisions
 
@@ -74,5 +95,22 @@ Auth is intentionally minimal: two pre-created Supabase accounts, login screen o
 | Optimistic reorder UI | setState before async Supabase call — shelf feels instant | ✓ Good — no perceived lag on drag-drop |
 | BookDetailScreen via constructor (not GoRouter state) | Keeps screen testable and decoupled from routing | ✓ Good — clean pattern, GoRouter extras used for scalar params only |
 
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd:transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd:complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
 ---
-*Last updated: 2026-03-23 after v1.0 milestone*
+*Last updated: 2026-03-25 after v2.0 milestone start*
