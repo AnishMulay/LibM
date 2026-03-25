@@ -1,0 +1,87 @@
+# Requirements: LibM
+
+**Defined:** 2026-03-25
+**Core Value:** She adds books she wants; he sees the wishlist, buys them, ships them, and moves them to the shelf — the app is the connective tissue of their shared reading life across distance.
+
+## v2.0 Requirements
+
+Exact feature parity with Flutter v1.0, rebuilt in Next.js 14 (App Router) + Tailwind CSS + Supabase JS.
+
+### Authentication
+
+- [ ] **AUTH-01**: User can log in with email and password
+- [ ] **AUTH-02**: Login page is the only entry point — no sign-up route exists
+- [ ] **AUTH-03**: Authenticated session persists across page refreshes (Supabase session)
+- [ ] **AUTH-04**: Unauthenticated users are redirected to login for all protected routes
+
+### Library
+
+- [ ] **LIB-01**: Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines
+- [ ] **LIB-02**: Each book spine shows rotated title and author text in the book's cover color
+- [ ] **LIB-03**: Books on the shelf can be manually reordered via drag-and-drop
+- [ ] **LIB-04**: Tapping a book spine opens the book detail view
+
+### Add Book
+
+- [ ] **BOOK-01**: User can add a book with title, author, cover color (8 old-money swatches), and optional notes
+- [ ] **BOOK-02**: Book is saved to Supabase and appears on the shelf immediately
+
+### Wishlist
+
+- [ ] **WISH-01**: Wishlist screen shows wishlist books on the same visual wooden bookshelf (no drag reorder)
+- [ ] **WISH-02**: Only her UID can see and use the "Add to Wishlist" button
+- [ ] **WISH-03**: Tapping a wishlist book spine opens the book detail view
+
+### Book Detail
+
+- [ ] **DETAIL-01**: Book detail view shows all fields read-only: title, author, cover color swatch, notes
+- [ ] **DETAIL-02**: From a wishlist book's detail view, he can move it to the library in one action
+
+## Future Requirements
+
+### Cover Images
+
+- **IMG-01**: User can upload an image as book cover (in addition to color swatch)
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| Sign-up / account creation | Two accounts pre-created in Supabase; no third account can ever exist |
+| Image upload for covers | Deferred to future milestone; color swatches only in v2.0 |
+| Social features / public sharing | Intentionally private — two users only |
+| Recommendations engine | Personal shelf, not a discovery app |
+| Reading status tracking | Not in scope |
+| ISBN / barcode scanning | Manual entry only |
+| Native mobile app | Flutter app retired; web-first from v2.0 onward |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| AUTH-01 | — | Pending |
+| AUTH-02 | — | Pending |
+| AUTH-03 | — | Pending |
+| AUTH-04 | — | Pending |
+| LIB-01 | — | Pending |
+| LIB-02 | — | Pending |
+| LIB-03 | — | Pending |
+| LIB-04 | — | Pending |
+| BOOK-01 | — | Pending |
+| BOOK-02 | — | Pending |
+| WISH-01 | — | Pending |
+| WISH-02 | — | Pending |
+| WISH-03 | — | Pending |
+| DETAIL-01 | — | Pending |
+| DETAIL-02 | — | Pending |
+
+**Coverage:**
+- v2.0 requirements: 15 total
+- Mapped to phases: 0
+- Unmapped: 15 ⚠️
+
+---
+*Requirements defined: 2026-03-25*
+*Last updated: 2026-03-25 after initial definition*
