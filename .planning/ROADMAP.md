@@ -3,6 +3,7 @@
 ## Milestones
 
 - ✅ **v1.0 MVP** — Phases 1–3 (shipped 2026-03-23)
+- 🚧 **v2.0 Next.js Rebuild** — Phases 4–7 (in progress)
 
 ## Phases
 
@@ -17,10 +18,74 @@ Full phase details: `.planning/milestones/v1.0-ROADMAP.md`
 
 </details>
 
+### 🚧 v2.0 Next.js Rebuild (In Progress)
+
+**Milestone Goal:** Rebuild LibM as a Next.js 14 web app with exact feature parity to the Flutter v1.0 app, keeping the Supabase backend intact.
+
+- [ ] **Phase 4: Setup & Auth** - Next.js scaffold, Supabase client, login page, and route protection
+- [ ] **Phase 5: Bookshelf UI Components** - Shared wooden shelf visual, book spine component, and old-money theme
+- [ ] **Phase 6: Library + Add Book** - Library route with drag reorder and full add-book form
+- [ ] **Phase 7: Wishlist + Book Detail** - Wishlist screen, book detail view, and move-to-library action
+
+## Phase Details
+
+### Phase 4: Setup & Auth
+**Goal**: Users can securely access the app from a browser and unauthenticated visitors are kept out
+**Depends on**: Nothing (first phase of v2.0)
+**Requirements**: AUTH-01, AUTH-02, AUTH-03, AUTH-04
+**Success Criteria** (what must be TRUE):
+  1. User can log in with their pre-created email and password from a browser
+  2. Refreshing or reopening the browser keeps the user logged in (session persists)
+  3. Navigating to any protected route while logged out redirects to the login page
+  4. No sign-up route or link exists anywhere in the app
+**Plans**: TBD
+**UI hint**: yes
+
+### Phase 5: Bookshelf UI Components
+**Goal**: The shared wooden bookshelf visual and book spine component exist and render correctly with the old-money aesthetic
+**Depends on**: Phase 4
+**Requirements**: LIB-01, LIB-02
+**Success Criteria** (what must be TRUE):
+  1. A wooden bookshelf with book spines renders on screen matching the neo-brutalist old-money aesthetic (parchment background, Georgia serif, thick black borders)
+  2. Each book spine shows the title and author text rotated vertically, rendered in the book's cover color against a fixed-width spine
+**Plans**: TBD
+**UI hint**: yes
+
+### Phase 6: Library + Add Book
+**Goal**: Users can view their full library on the bookshelf, reorder books by dragging, tap a book to open its detail, and add new books
+**Depends on**: Phase 5
+**Requirements**: LIB-03, LIB-04, BOOK-01, BOOK-02
+**Success Criteria** (what must be TRUE):
+  1. User can drag a book spine to a new position on the shelf and the order persists after page refresh
+  2. Tapping a book spine opens that book's detail view
+  3. User can submit the add-book form with title, author, a color swatch selection, and optional notes
+  4. A newly added book appears on the library shelf immediately without a manual refresh
+**Plans**: TBD
+**UI hint**: yes
+
+### Phase 7: Wishlist + Book Detail
+**Goal**: Users can view the wishlist shelf, read full book details, and he can move a wishlist book to the library in one action
+**Depends on**: Phase 6
+**Requirements**: WISH-01, WISH-02, WISH-03, DETAIL-01, DETAIL-02
+**Success Criteria** (what must be TRUE):
+  1. Wishlist screen shows wishlist books on the same wooden bookshelf visual (no drag reorder)
+  2. Only her account sees and can use the "Add to Wishlist" button
+  3. Tapping a wishlist book spine opens its detail view
+  4. Book detail view shows title, author, cover color swatch, and notes in a read-only layout
+  5. His account can move a wishlist book to the library from the detail view in one tap, and it appears on the library shelf
+**Plans**: TBD
+**UI hint**: yes
+
 ## Progress
+
+**Execution Order:** 4 → 5 → 6 → 7
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
 | 1. Auth | v1.0 | 2/2 | Complete | 2026-03-22 |
 | 2. Library | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
+| 4. Setup & Auth | v2.0 | 0/? | Not started | - |
+| 5. Bookshelf UI Components | v2.0 | 0/? | Not started | - |
+| 6. Library + Add Book | v2.0 | 0/? | Not started | - |
+| 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
