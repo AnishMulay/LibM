@@ -12,7 +12,7 @@ Exact feature parity with Flutter v1.0, rebuilt in Next.js 14 (App Router) + Tai
 - [x] **AUTH-01**: User can log in with email and password
 - [x] **AUTH-02**: Login page is the only entry point — no sign-up route exists
 - [x] **AUTH-03**: Authenticated session persists across page refreshes (Supabase session)
-- [ ] **AUTH-04**: Unauthenticated users are redirected to login for all protected routes
+- [x] **AUTH-04**: Unauthenticated users are redirected to login for all protected routes
 
 ### Library
 
@@ -64,7 +64,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-01 | Phase 4 | Complete |
 | AUTH-02 | Phase 4 | Complete |
 | AUTH-03 | Phase 4 | Complete |
-| AUTH-04 | Phase 4 | Pending |
+| AUTH-04 | Phase 4 | Complete |
 | LIB-01 | Phase 5 | Pending |
 | LIB-02 | Phase 5 | Pending |
 | LIB-03 | Phase 6 | Pending |
