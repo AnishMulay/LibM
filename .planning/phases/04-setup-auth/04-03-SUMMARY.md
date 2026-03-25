@@ -55,7 +55,7 @@ completed: 2026-03-25
 - **Duration:** ~1 min
 - **Started:** 2026-03-25T23:24:57Z
 - **Completed:** 2026-03-25T23:25:45Z
-- **Tasks:** 1 of 2 (Task 2 is human-verify checkpoint — pending)
+- **Tasks:** 2 of 2
 - **Files modified:** 1
 
 ## Accomplishments
@@ -71,8 +71,7 @@ completed: 2026-03-25
 Each task was committed atomically:
 
 1. **Task 1: Implement Next.js middleware for route protection** - `c44c704` (feat)
-
-**Plan metadata:** (pending — awaiting checkpoint approval before final docs commit)
+2. **Task 2: Verify: Full auth flow end-to-end** - human-verify checkpoint — approved by user
 
 ## Files Created/Modified
 - `web/middleware.ts` - Next.js middleware intercepting all requests; enforces auth via getUser(); redirects unauthenticated to /login and authenticated /login visitors to /
@@ -93,11 +92,20 @@ None.
 
 None - no external service configuration required beyond what was documented in Plan 02.
 
+## Human Verification Results
+
+Task 2 checkpoint approved. Full end-to-end auth flow validated in browser:
+- AUTH-04: Unauthenticated navigation to / redirected to /login — confirmed
+- AUTH-01: Login with valid Supabase credentials lands on / — confirmed
+- AUTH-02: Login page has no sign-up link, no OAuth buttons — confirmed
+- AUTH-03: Session persists across page refresh (F5) — confirmed
+- Redirect loop prevention: Authenticated user hitting /login redirected to / — confirmed
+- Visual: Parchment background, Georgia serif heading, squared inputs, forest green button — confirmed
+
 ## Next Phase Readiness
-- Complete Phase 4 auth loop: scaffold (01) + Supabase clients + login UI (02) + route protection (03)
-- Human verification checkpoint (Task 2) must be approved before this plan is fully complete
-- After checkpoint approval, AUTH-03 and AUTH-04 requirements are fully validated end-to-end
-- Phase 05 (library/bookshelf) can begin once checkpoint is approved
+- Complete Phase 4 auth loop: scaffold (01) + Supabase clients + login UI (02) + route protection (03) — COMPLETE
+- AUTH-03 and AUTH-04 requirements fully validated end-to-end
+- Phase 05 (library/bookshelf) can begin
 
 ---
 *Phase: 04-setup-auth*
