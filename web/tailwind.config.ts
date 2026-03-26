@@ -18,6 +18,10 @@ const config: Config = {
         'text-secondary': '#666666',
         // Borders
         border: '#000000',
+        // Wood tones — bookshelf gradient (Phase 5)
+        'wood-light': '#8B6F47',
+        'wood-mid':   '#6B5438',
+        'wood-dark':  '#4A3728',
       },
       fontFamily: {
         georgia: ['Georgia', "'Times New Roman'", 'serif'],

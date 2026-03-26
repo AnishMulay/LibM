@@ -10,6 +10,10 @@
   --color-text-primary: #222222;
   --color-text-secondary: #666666;
   --color-border: #000000;
+  /* Wood tones — bookshelf gradient (Phase 5) */
+  --color-wood-light: #8B6F47;
+  --color-wood-mid:   #6B5438;
+  --color-wood-dark:  #4A3728;
 
   /* Spacing tokens */
   --space-xs: 4px;
