@@ -36,15 +36,15 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 - ✓ Each book has a detail view showing all its fields — v1.0
 - ✓ App works on iOS (his) and Android (hers) — v1.0
 - ✓ User can log in with pre-created email + password credentials (no sign-up flow) — web — Validated in Phase 04: setup-auth
+- ✓ Library screen wired to live Supabase data with drag-and-drop reorder — Validated in Phase 06: library-add-book
+- ✓ Books on the shelf can be manually reordered via drag (web) — Validated in Phase 06: library-add-book
+- ✓ Books are added manually with: title, author, cover color swatch (8 old-money colors), and optional notes (web) — Validated in Phase 06: library-add-book
+- ✓ Each book has a read-only detail view showing all its fields (web) — Validated in Phase 06: library-add-book
 
 ### Active
 
-- [ ] Library screen wired to live Supabase data (Phase 6)
-- [ ] Books on the shelf can be manually reordered via drag
-- [ ] Books are added manually with: title, author, cover color swatch (8 old-money colors), and optional notes
 - [ ] Wishlist screen shows books she wants; only she can add to it (UID gate)
 - [ ] A book can be moved from wishlist to library from the book detail view
-- [ ] Each book has a read-only detail view showing all its fields
 - [ ] App is deployed on Vercel and accessible via web browser
 
 ### Out of Scope
@@ -115,4 +115,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-25 — Phase 05 (bookshelf-ui-components) complete*
+*Last updated: 2026-03-26 — Phase 06 (library-add-book) complete*
