@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
 status: Ready to execute
-stopped_at: Completed 06-01-PLAN.md
-last_updated: "2026-03-26T03:00:57.679Z"
+stopped_at: Completed 06-02-PLAN.md
+last_updated: "2026-03-26T03:04:26.319Z"
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 9
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-25)
 ## Current Position
 
 Phase: 06 (library-add-book) — EXECUTING
-Plan: 2 of 4
+Plan: 3 of 4
 
 ## Performance Metrics
 
@@ -48,6 +48,7 @@ Plan: 2 of 4
 | Phase 05-bookshelf-ui-components P01 | 1min | 2 tasks | 3 files |
 | Phase 05-bookshelf-ui-components P02 | 30 | 3 tasks | 2 files |
 | Phase 06-library-add-book P01 | 1min | 2 tasks | 3 files |
+| Phase 06-library-add-book P02 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,7 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 05-bookshelf-ui-components]: Inline style required for linear-gradient: Tailwind cannot generate gradient stops from custom wood-* color tokens — hex values used directly
 - [Phase 06-library-add-book]: Dual Book/BookRow interface pattern: BookRow for raw Supabase snake_case responses, Book for camelCase component consumption, bridged by bookRowToBook() converter
 - [Phase 06-library-add-book]: Book.coverColor/isWishlist/createdAt field names aligned to BookSpineProps convention established in Phase 05 — no field remapping needed when passing to BookSpine
+- [Phase 06-library-add-book]: PointerSensor distance:8 threshold prevents accidental drags on tap; DragOverlay ghost at opacity 0.5; optimistic reorder with Supabase batch update and revert on failure
 
 ### Pending Todos
 
@@ -81,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T03:00:57.676Z
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-03-26T03:04:26.316Z
+Stopped at: Completed 06-02-PLAN.md
 Resume file: None
