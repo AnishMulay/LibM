@@ -24,6 +24,8 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Validated
 
+- ✓ Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines — Validated in Phase 05: bookshelf-ui-components
+- ✓ Each spine shows rotated title/author in book's cover color with WCAG auto-contrast — Validated in Phase 05: bookshelf-ui-components
 - ✓ User can log in with pre-created email + password credentials (no sign-up flow) — v1.0
 - ✓ Two fixed accounts are the only accounts that can ever access the app (Supabase RLS enforced) — v1.0
 - ✓ Library view shows all owned books as a visual bookshelf — book spines on wooden shelves — v1.0
@@ -37,7 +39,7 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Active
 
-- [ ] Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines
+- [ ] Library screen wired to live Supabase data (Phase 6)
 - [ ] Books on the shelf can be manually reordered via drag
 - [ ] Books are added manually with: title, author, cover color swatch (8 old-money colors), and optional notes
 - [ ] Wishlist screen shows books she wants; only she can add to it (UID gate)
@@ -113,4 +115,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-25 — Phase 04 (setup-auth) complete*
+*Last updated: 2026-03-25 — Phase 05 (bookshelf-ui-components) complete*
