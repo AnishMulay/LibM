@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
-status: Ready to execute
-stopped_at: Completed 06-03-PLAN.md
-last_updated: "2026-03-26T03:07:27.734Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 06-04-PLAN.md
+last_updated: "2026-03-26T03:09:54.106Z"
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 9
-  completed_plans: 8
+  completed_plans: 9
 ---
 
 # Project State
@@ -50,6 +50,7 @@ Plan: 4 of 4
 | Phase 06-library-add-book P01 | 1min | 2 tasks | 3 files |
 | Phase 06-library-add-book P02 | 2min | 2 tasks | 2 files |
 | Phase 06-library-add-book P03 | 3min | 1 tasks | 1 files |
+| Phase 06-library-add-book P04 | 2min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,7 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 06-library-add-book]: Book.coverColor/isWishlist/createdAt field names aligned to BookSpineProps convention established in Phase 05 — no field remapping needed when passing to BookSpine
 - [Phase 06-library-add-book]: PointerSensor distance:8 threshold prevents accidental drags on tap; DragOverlay ghost at opacity 0.5; optimistic reorder with Supabase batch update and revert on failure
 - [Phase 06-library-add-book]: Validate-on-submit only for add-book form; position=max+1 query appends to shelf end; cover color required to prevent blank BookSpine renders
+- [Phase 06-library-add-book]: notFound() handles both error and null data — covers PGRST116 without inspecting error codes; back link always /library in Phase 6; full Server Component for read-only SSR detail view
 
 ### Pending Todos
 
@@ -85,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T03:07:27.731Z
-Stopped at: Completed 06-03-PLAN.md
+Last session: 2026-03-26T03:09:54.103Z
+Stopped at: Completed 06-04-PLAN.md
 Resume file: None

@@ -77,7 +77,7 @@ Plans:
 - [x] 06-01-PLAN.md — Shared Book type + install dnd-kit packages
 - [x] 06-02-PLAN.md — Library page: SSR Supabase fetch, "+" button, dnd-kit drag reorder (LIB-03, LIB-04)
 - [x] 06-03-PLAN.md — Add Book form at /library/add with 8-swatch picker and Supabase insert (BOOK-01, BOOK-02)
-- [ ] 06-04-PLAN.md — Book detail page at /books/[id]: read-only SSR view (LIB-04)
+- [x] 06-04-PLAN.md — Book detail page at /books/[id]: read-only SSR view (LIB-04)
 
 **UI hint**: yes
 
