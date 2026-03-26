@@ -18,13 +18,13 @@ Exact feature parity with Flutter v1.0, rebuilt in Next.js 14 (App Router) + Tai
 
 - [x] **LIB-01**: Library screen shows all owned books as a visual wooden bookshelf with fixed-width spines
 - [x] **LIB-02**: Each book spine shows rotated title and author text in the book's cover color
-- [ ] **LIB-03**: Books on the shelf can be manually reordered via drag-and-drop
-- [ ] **LIB-04**: Tapping a book spine opens the book detail view
+- [x] **LIB-03**: Books on the shelf can be manually reordered via drag-and-drop
+- [x] **LIB-04**: Tapping a book spine opens the book detail view
 
 ### Add Book
 
-- [ ] **BOOK-01**: User can add a book with title, author, cover color (8 old-money swatches), and optional notes
-- [ ] **BOOK-02**: Book is saved to Supabase and appears on the shelf immediately
+- [x] **BOOK-01**: User can add a book with title, author, cover color (8 old-money swatches), and optional notes
+- [x] **BOOK-02**: Book is saved to Supabase and appears on the shelf immediately
 
 ### Wishlist
 
@@ -67,10 +67,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-04 | Phase 4 | Complete |
 | LIB-01 | Phase 5 | Complete |
 | LIB-02 | Phase 5 | Complete |
-| LIB-03 | Phase 6 | Pending |
-| LIB-04 | Phase 6 | Pending |
-| BOOK-01 | Phase 6 | Pending |
-| BOOK-02 | Phase 6 | Pending |
+| LIB-03 | Phase 6 | Complete |
+| LIB-04 | Phase 6 | Complete |
+| BOOK-01 | Phase 6 | Complete |
+| BOOK-02 | Phase 6 | Complete |
 | WISH-01 | Phase 7 | Pending |
 | WISH-02 | Phase 7 | Pending |
 | WISH-03 | Phase 7 | Pending |

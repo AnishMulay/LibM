@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
-status: Ready to plan
-stopped_at: Phase 6 context gathered (discuss mode)
-last_updated: "2026-03-26T02:46:55.649Z"
+status: Ready to execute
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-26T03:00:57.679Z"
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 9
+  completed_plans: 6
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-25)
 
 **Core value:** She adds books she wants; he sees the wishlist, buys them, ships them, and moves them to the shelf — the app is the connective tissue of their shared reading life across distance.
-**Current focus:** Phase 05 — bookshelf-ui-components
+**Current focus:** Phase 06 — library-add-book
 
 ## Current Position
 
-Phase: 6
-Plan: Not started
+Phase: 06 (library-add-book) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Plan: Not started
 | Phase 04-setup-auth P03 | 7min | 2 tasks | 1 files |
 | Phase 05-bookshelf-ui-components P01 | 1min | 2 tasks | 3 files |
 | Phase 05-bookshelf-ui-components P02 | 30 | 3 tasks | 2 files |
+| Phase 06-library-add-book P01 | 1min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 05-bookshelf-ui-components]: BookSpine fixed at 56x150px for 6-8 spines per row at 1280px; writing-mode:vertical-rl+rotate(180deg) for text rotation; getContrastColor uses WCAG luminance (0.299/0.587/0.114) threshold at 0.5
 - [Phase 05-bookshelf-ui-components]: Single flex-wrap shelf strip: wrapping spines continue on same gradient background, producing multi-row shelf visual naturally without row-splitting logic
 - [Phase 05-bookshelf-ui-components]: Inline style required for linear-gradient: Tailwind cannot generate gradient stops from custom wood-* color tokens — hex values used directly
+- [Phase 06-library-add-book]: Dual Book/BookRow interface pattern: BookRow for raw Supabase snake_case responses, Book for camelCase component consumption, bridged by bookRowToBook() converter
+- [Phase 06-library-add-book]: Book.coverColor/isWishlist/createdAt field names aligned to BookSpineProps convention established in Phase 05 — no field remapping needed when passing to BookSpine
 
 ### Pending Todos
 
@@ -78,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T02:46:55.646Z
-Stopped at: Phase 6 context gathered (discuss mode)
-Resume file: .planning/phases/06-library-add-book/06-CONTEXT.md
+Last session: 2026-03-26T03:00:57.676Z
+Stopped at: Completed 06-01-PLAN.md
+Resume file: None
