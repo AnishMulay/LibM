@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
-status: Ready to execute
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-26T01:33:12.885Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-26T02:23:31.607Z"
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -46,6 +46,7 @@ Plan: 2 of 2
 | Phase 04-setup-auth P03 | 1 | 1 tasks | 1 files |
 | Phase 04-setup-auth P03 | 7min | 2 tasks | 1 files |
 | Phase 05-bookshelf-ui-components P01 | 1min | 2 tasks | 3 files |
+| Phase 05-bookshelf-ui-components P02 | 30 | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,8 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 04-setup-auth]: Middleware matcher excludes _next/static and _next/image paths so static assets bypass auth checks
 - [Phase 04-setup-auth]: getUser() over getSession() in middleware for authoritative JWT validation against Supabase auth server
 - [Phase 05-bookshelf-ui-components]: BookSpine fixed at 56x150px for 6-8 spines per row at 1280px; writing-mode:vertical-rl+rotate(180deg) for text rotation; getContrastColor uses WCAG luminance (0.299/0.587/0.114) threshold at 0.5
+- [Phase 05-bookshelf-ui-components]: Single flex-wrap shelf strip: wrapping spines continue on same gradient background, producing multi-row shelf visual naturally without row-splitting logic
+- [Phase 05-bookshelf-ui-components]: Inline style required for linear-gradient: Tailwind cannot generate gradient stops from custom wood-* color tokens — hex values used directly
 
 ### Pending Todos
 
@@ -75,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T01:33:12.882Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-26T02:23:31.605Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

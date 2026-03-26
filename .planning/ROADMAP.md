@@ -58,7 +58,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — Wood color tokens + BookSpine component (fixed-width spine, rotated text, auto-contrast)
-- [ ] 05-02-PLAN.md — Bookshelf component + /library demo route with 8 hardcoded books
+- [x] 05-02-PLAN.md — Bookshelf component + /library demo route with 8 hardcoded books
 
 **UI hint**: yes
 
