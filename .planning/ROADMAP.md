@@ -71,7 +71,14 @@ Plans:
   2. Tapping a book spine opens that book's detail view
   3. User can submit the add-book form with title, author, a color swatch selection, and optional notes
   4. A newly added book appears on the library shelf immediately without a manual refresh
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Shared Book type + install dnd-kit packages
+- [ ] 06-02-PLAN.md — Library page: SSR Supabase fetch, "+" button, dnd-kit drag reorder (LIB-03, LIB-04)
+- [ ] 06-03-PLAN.md — Add Book form at /library/add with 8-swatch picker and Supabase insert (BOOK-01, BOOK-02)
+- [ ] 06-04-PLAN.md — Book detail page at /books/[id]: read-only SSR view (LIB-04)
+
 **UI hint**: yes
 
 ### Phase 7: Wishlist + Book Detail
@@ -98,5 +105,5 @@ Plans:
 | 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2026-03-25 |
 | 5. Bookshelf UI Components | v2.0 | 1/2 | In Progress|  |
-| 6. Library + Add Book | v2.0 | 0/? | Not started | - |
+| 6. Library + Add Book | v2.0 | 0/4 | Not started | - |
 | 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
