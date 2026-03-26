@@ -54,7 +54,12 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. A wooden bookshelf with book spines renders on screen matching the neo-brutalist old-money aesthetic (parchment background, Georgia serif, thick black borders)
   2. Each book spine shows the title and author text rotated vertically, rendered in the book's cover color against a fixed-width spine
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Wood color tokens + BookSpine component (fixed-width spine, rotated text, auto-contrast)
+- [ ] 05-02-PLAN.md — Bookshelf component + /library demo route with 8 hardcoded books
+
 **UI hint**: yes
 
 ### Phase 6: Library + Add Book
@@ -92,6 +97,6 @@ Plans:
 | 2. Library | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2026-03-25 |
-| 5. Bookshelf UI Components | v2.0 | 0/? | Not started | - |
+| 5. Bookshelf UI Components | v2.0 | 0/2 | Not started | - |
 | 6. Library + Add Book | v2.0 | 0/? | Not started | - |
 | 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
