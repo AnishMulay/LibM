@@ -57,7 +57,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Wood color tokens + BookSpine component (fixed-width spine, rotated text, auto-contrast)
+- [x] 05-01-PLAN.md — Wood color tokens + BookSpine component (fixed-width spine, rotated text, auto-contrast)
 - [ ] 05-02-PLAN.md — Bookshelf component + /library demo route with 8 hardcoded books
 
 **UI hint**: yes
@@ -97,6 +97,6 @@ Plans:
 | 2. Library | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
 | 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2026-03-25 |
-| 5. Bookshelf UI Components | v2.0 | 0/2 | Not started | - |
+| 5. Bookshelf UI Components | v2.0 | 1/2 | In Progress|  |
 | 6. Library + Add Book | v2.0 | 0/? | Not started | - |
 | 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
