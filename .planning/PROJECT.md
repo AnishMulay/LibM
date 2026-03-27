@@ -43,9 +43,12 @@ She adds books she wants; he sees the wishlist, buys them, ships them, and moves
 
 ### Active
 
-- [ ] Wishlist screen shows books she wants; only she can add to it (UID gate)
-- [ ] A book can be moved from wishlist to library from the book detail view
 - [ ] App is deployed on Vercel and accessible via web browser
+
+### Validated (Phase 07)
+
+- ✓ Wishlist screen shows books she wants; only she can add to it (UID gate) — Validated in Phase 07: wishlist-book-detail
+- ✓ A book can be moved from wishlist to library from the book detail view — Validated in Phase 07: wishlist-book-detail
 
 ### Out of Scope
 
@@ -115,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-26 — Phase 06 (library-add-book) complete*
+*Last updated: 2026-03-26
