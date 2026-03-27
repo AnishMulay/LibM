@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { bookRowToBook, BookRow } from '@/types/book'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import MoveToLibraryButton from '@/components/bookshelf/MoveToLibraryButton'
 
 interface BookDetailPageProps {
   params: { id: string }
@@ -27,9 +28,9 @@ export default async function BookDetailPage({ params }: BookDetailPageProps) {
     <main className="min-h-screen bg-parchment">
       <div className="px-md py-lg">
 
-        {/* Back link — per D-11, UI-SPEC: "← Library", 14px label, charcoal text */}
+        {/* Back link — conditional: "← Wishlist" for wishlist books, "← Library" for library books (DETAIL-01) */}
         <Link
-          href="/library"
+          href={book.isWishlist ? '/wishlist' : '/library'}
           className="font-georgia"
           style={{
             display: 'inline-block',
@@ -40,7 +41,7 @@ export default async function BookDetailPage({ params }: BookDetailPageProps) {
             marginBottom: '32px',
           }}
         >
-          ← Library
+          {book.isWishlist ? '← Wishlist' : '← Library'}
         </Link>
 
         {/* Book info container: parchment bg, 2px black border — per UI-SPEC */}
@@ -108,6 +109,9 @@ export default async function BookDetailPage({ params }: BookDetailPageProps) {
               {book.notes ?? 'No notes'}
             </p>
           </div>
+
+          {/* Move to Library — visible only for wishlist books (D-11, DETAIL-02) */}
+          {book.isWishlist && <MoveToLibraryButton bookId={book.id} />}
 
         </div>
       </div>
