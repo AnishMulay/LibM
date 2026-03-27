@@ -28,9 +28,9 @@ Exact feature parity with Flutter v1.0, rebuilt in Next.js 14 (App Router) + Tai
 
 ### Wishlist
 
-- [ ] **WISH-01**: Wishlist screen shows wishlist books on the same visual wooden bookshelf (no drag reorder)
-- [ ] **WISH-02**: Only her UID can see and use the "Add to Wishlist" button
-- [ ] **WISH-03**: Tapping a wishlist book spine opens the book detail view
+- [x] **WISH-01**: Wishlist screen shows wishlist books on the same visual wooden bookshelf (no drag reorder)
+- [x] **WISH-02**: Only her UID can see and use the "Add to Wishlist" button
+- [x] **WISH-03**: Tapping a wishlist book spine opens the book detail view
 
 ### Book Detail
 
@@ -71,9 +71,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LIB-04 | Phase 6 | Complete |
 | BOOK-01 | Phase 6 | Complete |
 | BOOK-02 | Phase 6 | Complete |
-| WISH-01 | Phase 7 | Pending |
-| WISH-02 | Phase 7 | Pending |
-| WISH-03 | Phase 7 | Pending |
+| WISH-01 | Phase 7 | Complete |
+| WISH-02 | Phase 7 | Complete |
+| WISH-03 | Phase 7 | Complete |
 | DETAIL-01 | Phase 7 | Complete |
 | DETAIL-02 | Phase 7 | Complete |
 
