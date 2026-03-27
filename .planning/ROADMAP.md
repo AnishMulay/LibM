@@ -91,7 +91,13 @@ Plans:
   3. Tapping a wishlist book spine opens its detail view
   4. Book detail view shows title, author, cover color swatch, and notes in a read-only layout
   5. His account can move a wishlist book to the library from the detail view in one tap, and it appears on the library shelf
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 07-01-PLAN.md — Wishlist screen: WishlistShelf client wrapper + /wishlist Server Component with UID gate (WISH-01, WISH-02, WISH-03)
+- [ ] 07-02-PLAN.md — Wishlist add form at /wishlist/add mirroring /library/add (WISH-02)
+- [ ] 07-03-PLAN.md — Book detail extension: conditional back link + MoveToLibraryButton (DETAIL-01, DETAIL-02)
+
 **UI hint**: yes
 
 ## Progress
@@ -106,4 +112,4 @@ Plans:
 | 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2026-03-25 |
 | 5. Bookshelf UI Components | v2.0 | 1/2 | In Progress|  |
 | 6. Library + Add Book | v2.0 | 3/4 | In Progress|  |
-| 7. Wishlist + Book Detail | v2.0 | 0/? | Not started | - |
+| 7. Wishlist + Book Detail | v2.0 | 0/3 | Not started | - |
