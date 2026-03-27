@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
-status: Ready to plan
-stopped_at: Phase 7 context gathered (discuss mode)
-last_updated: "2026-03-27T01:40:31.150Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 07-03-PLAN.md
+last_updated: "2026-03-27T01:54:52.814Z"
 progress:
   total_phases: 4
   completed_phases: 3
-  total_plans: 9
-  completed_plans: 9
+  total_plans: 12
+  completed_plans: 11
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-25)
 
 **Core value:** She adds books she wants; he sees the wishlist, buys them, ships them, and moves them to the shelf — the app is the connective tissue of their shared reading life across distance.
-**Current focus:** Phase 06 — library-add-book
+**Current focus:** Phase 07 — wishlist-book-detail
 
 ## Current Position
 
-Phase: 7
-Plan: Not started
+Phase: 07 (wishlist-book-detail) — EXECUTING
+Plan: 3 of 3
 
 ## Performance Metrics
 
@@ -51,6 +51,9 @@ Plan: Not started
 | Phase 06-library-add-book P02 | 2min | 2 tasks | 2 files |
 | Phase 06-library-add-book P03 | 3min | 1 tasks | 1 files |
 | Phase 06-library-add-book P04 | 2min | 1 tasks | 1 files |
+| Phase 07-wishlist-book-detail P02 | 2min | 1 tasks | 1 files |
+| Phase 07-wishlist-book-detail P03 | 1min | 2 tasks | 2 files |
+| Phase 07-wishlist-book-detail P01 | 2min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -76,6 +79,12 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 06-library-add-book]: PointerSensor distance:8 threshold prevents accidental drags on tap; DragOverlay ghost at opacity 0.5; optimistic reorder with Supabase batch update and revert on failure
 - [Phase 06-library-add-book]: Validate-on-submit only for add-book form; position=max+1 query appends to shelf end; cover color required to prevent blank BookSpine renders
 - [Phase 06-library-add-book]: notFound() handles both error and null data — covers PGRST116 without inspecting error codes; back link always /library in Phase 6; full Server Component for read-only SSR detail view
+- [Phase 07-wishlist-book-detail]: Position uses max+1 of wishlist books to satisfy NOT NULL constraint — wishlist books aren't ordered by position but column requires a value
+- [Phase 07-wishlist-book-detail]: Wishlist add button label stays 'Save Book' per UI-SPEC — keeps parity with library add form
+- [Phase 07-wishlist-book-detail]: Navigate to /wishlist after move (D-14) — user stays in wishlist-management context, no confirmation dialog (D-11)
+- [Phase 07-wishlist-book-detail]: WishlistShelf is a thin 'use client' wrapper — Server Component owns fetch and UID gate
+- [Phase 07-wishlist-book-detail]: Silent asymmetry: showAddButton=false renders nothing — no disabled state (D-06)
+- [Phase 07-wishlist-book-detail]: Wishlist books ordered by created_at ascending (D-01) vs library's position-based drag order
 
 ### Pending Todos
 
@@ -87,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T01:40:31.146Z
-Stopped at: Phase 7 context gathered (discuss mode)
-Resume file: .planning/phases/07-wishlist-book-detail/07-CONTEXT.md
+Last session: 2026-03-27T01:54:47.558Z
+Stopped at: Completed 07-03-PLAN.md
+Resume file: None

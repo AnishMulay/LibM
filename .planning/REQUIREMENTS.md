@@ -34,8 +34,8 @@ Exact feature parity with Flutter v1.0, rebuilt in Next.js 14 (App Router) + Tai
 
 ### Book Detail
 
-- [ ] **DETAIL-01**: Book detail view shows all fields read-only: title, author, cover color swatch, notes
-- [ ] **DETAIL-02**: From a wishlist book's detail view, he can move it to the library in one action
+- [x] **DETAIL-01**: Book detail view shows all fields read-only: title, author, cover color swatch, notes
+- [x] **DETAIL-02**: From a wishlist book's detail view, he can move it to the library in one action
 
 ## Future Requirements
 
@@ -74,8 +74,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WISH-01 | Phase 7 | Pending |
 | WISH-02 | Phase 7 | Pending |
 | WISH-03 | Phase 7 | Pending |
-| DETAIL-01 | Phase 7 | Pending |
-| DETAIL-02 | Phase 7 | Pending |
+| DETAIL-01 | Phase 7 | Complete |
+| DETAIL-02 | Phase 7 | Complete |
 
 **Coverage:**
 - v2.0 requirements: 15 total
