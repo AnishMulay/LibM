@@ -99,9 +99,10 @@ None yet.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 260328-okc | Fix 400 Bad Request on Supabase books insert - missing user_id and cover_color type mismatch | 2026-03-28 | 272198f | [260328-okc-fix-400-bad-request-on-supabase-books-in](./quick/260328-okc-fix-400-bad-request-on-supabase-books-in/) |
+| 260328-or6 | Full feature parity audit — cache revalidation, wishlist nav, sign-out, cover colors, notes display, wishlist empty state | 2026-03-28 | 40822ef | [260328-or6-full-feature-parity-audit-compare-flutte](./quick/260328-or6-full-feature-parity-audit-compare-flutte/) |
 
 ## Session Continuity
 
 Last session: 2026-03-28
-Stopped at: Completed quick task 260328-okc: Fix 400 Bad Request on Supabase books insert - missing user_id and cover_color type mismatch
+Stopped at: Completed quick task 260328-or6: Full feature parity audit — cache revalidation, wishlist nav, sign-out, cover colors, notes display, wishlist empty state
 Resume file: None
