@@ -100,9 +100,22 @@ Plans:
 
 **UI hint**: yes
 
+### Phase 8: UI Faithful Port — make the Next.js app look and navigate exactly like the Flutter Chrome app. The Flutter codebase in libm/lib/ is the single source of truth for all UI, colors, typography, navigation, and layout. Do not invent anything new.
+
+**Goal:** The Next.js app is visually pixel-perfect with the Flutter Chrome app — correct wood gradient colors, correct book spine dimensions, correct typography sizes, correct button colors, and correct focus/selection states throughout
+**Requirements**: TBD
+**Depends on:** Phase 7
+**Plans:** 4 plans
+
+Plans:
+- [ ] 08-01-PLAN.md — Design tokens: correct wood gradient colors, aged-gold, heading/error font sizes in tailwind.config.ts + globals.css
+- [ ] 08-02-PLAN.md — BookSpine: height 150→200px, both font sizes to 14px, remove author opacity
+- [ ] 08-03-PLAN.md — Shelf components: correct gradient/lip/shadow in LibraryShelf, Bookshelf, WishlistShelf; Wishlist heading 32px; add button #D4AF6A
+- [ ] 08-04-PLAN.md — Page corrections: Library/AddBook headings 32px, add button color, input focus border, swatch selection border, Save button color
+
 ## Progress
 
-**Execution Order:** 4 → 5 → 6 → 7
+**Execution Order:** 4 → 5 → 6 → 7 → 8
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
@@ -113,3 +126,4 @@ Plans:
 | 5. Bookshelf UI Components | v2.0 | 1/2 | In Progress|  |
 | 6. Library + Add Book | v2.0 | 3/4 | In Progress|  |
 | 7. Wishlist + Book Detail | v2.0 | 2/3 | In Progress|  |
+| 8. UI Faithful Port | v2.0 | 0/4 | Not started |  |
