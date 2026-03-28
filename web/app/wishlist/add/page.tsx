@@ -8,12 +8,12 @@ import { createClient } from '@/lib/supabase/client'
 const COVER_COLORS = [
   { label: 'Parchment',    hex: '#F5F0E8' },
   { label: 'Forest Green', hex: '#2D4A3E' },
-  { label: 'Burgundy',     hex: '#8B1A1A' },
-  { label: 'Navy',         hex: '#0B3D91' },
-  { label: 'Aged Gold',    hex: '#D4AF37' },
-  { label: 'Charcoal',     hex: '#2C2C2C' },
-  { label: 'Rust',         hex: '#A0522D' },
-  { label: 'Cream',        hex: '#F5E6D3' },
+  { label: 'Burgundy',     hex: '#8B3A3A' },
+  { label: 'Navy',         hex: '#1A3A4A' },
+  { label: 'Aged Gold',    hex: '#D4AF6A' },
+  { label: 'Charcoal',     hex: '#3A3A3A' },
+  { label: 'Rust',         hex: '#9B4A4A' },
+  { label: 'Cream',        hex: '#FFFAF0' },
 ]
 
 export default function AddToWishlistPage() {
@@ -98,8 +98,9 @@ export default function AddToWishlistPage() {
       return
     }
 
-    // Success: navigate back to wishlist — SSR re-fetch will show the new book
+    // Success: navigate back to wishlist — router.refresh() forces RSC re-fetch
     router.push('/wishlist')
+    router.refresh()
   }
 
   const handleCancel = () => {
