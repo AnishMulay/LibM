@@ -38,7 +38,7 @@ export default function BookSpine({ id, title, author, coverColor, onTap }: Book
       role="listitem"
       aria-label={title}
       className="relative flex-shrink-0 border-2 border-black cursor-pointer"
-      style={{ width: '56px', height: '150px', backgroundColor: coverColor }}
+      style={{ width: '56px', height: '200px', backgroundColor: coverColor }}
       onClick={onTap}
     >
       {/* Inner container: absolute fill, flex centering */}
@@ -52,7 +52,7 @@ export default function BookSpine({ id, title, author, coverColor, onTap }: Book
             flexDirection: 'column',
             alignItems: 'center',
             gap: '4px',
-            maxHeight: '140px',
+            maxHeight: '190px',
             overflow: 'hidden',
           }}
         >
@@ -60,7 +60,7 @@ export default function BookSpine({ id, title, author, coverColor, onTap }: Book
           <span
             style={{
               color: textColor,
-              fontSize: '16px',
+              fontSize: '14px',
               lineHeight: '1.5',
               fontFamily: 'Georgia, serif',
               overflow: 'hidden',
@@ -76,14 +76,13 @@ export default function BookSpine({ id, title, author, coverColor, onTap }: Book
           <span
             style={{
               color: textColor,
-              fontSize: '13px',
+              fontSize: '14px',
               lineHeight: '1.4',
               fontFamily: 'Georgia, serif',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
               maxWidth: '120px',
-              opacity: 0.85,
             }}
           >
             {author}
