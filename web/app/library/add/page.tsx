@@ -82,6 +82,7 @@ export default function AddBookPage() {
     const newPosition = maxPosition + 1
 
     const { error } = await supabase.from('books').insert({
+      user_id: user.id,
       title: title.trim(),
       author: author.trim(),
       cover_color: coverColor!,
