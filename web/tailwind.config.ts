@@ -19,9 +19,12 @@ const config: Config = {
         // Borders
         border: '#000000',
         // Wood tones — bookshelf gradient (Phase 5)
-        'wood-light': '#8B6F47',
-        'wood-mid':   '#6B5438',
-        'wood-dark':  '#4A3728',
+        // Flutter AppColors: shelfWoodLight, shelfWoodDark, shelfLip (2-stop gradient, no mid)
+        'wood-light': '#C8A06E',   // Flutter AppColors.shelfWoodLight
+        'wood-dark':  '#8B5E3C',   // Flutter AppColors.shelfWoodDark
+        'wood-lip':   '#4A2E1A',   // Flutter AppColors.shelfLip
+        // Cover swatches
+        'aged-gold':  '#D4AF6A',   // Flutter coverSwatches[4]
       },
       fontFamily: {
         georgia: ['Georgia', "'Times New Roman'", 'serif'],
@@ -59,7 +62,8 @@ const config: Config = {
         'display': ['48px', { lineHeight: '1.0', fontWeight: '700' }],
         'subtitle': ['14px', { lineHeight: '1.4', fontWeight: '400' }],
         'body': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
-        'error': ['13px', { lineHeight: '1.4', fontWeight: '400' }],
+        'heading': ['32px', { lineHeight: '1.0', fontWeight: '700' }],
+        'error': ['14px', { lineHeight: '1.4', fontWeight: '400' }],
       },
     },
   },
