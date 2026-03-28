@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { bookRowToBook, BookRow } from '@/types/book'
 import LibraryShelf from '@/components/bookshelf/LibraryShelf'
 import Link from 'next/link'
+import SignOutButton from '@/components/bookshelf/SignOutButton'
 
 export default async function LibraryPage() {
   const supabase = await createClient()
@@ -22,7 +23,7 @@ export default async function LibraryPage() {
   return (
     <main className="min-h-screen bg-parchment">
       <div className="px-md py-lg">
-        {/* Header: title + "+" button */}
+        {/* Header: title + wishlist link + add button + sign-out */}
         <div className="flex flex-row items-center justify-between mb-xl">
           <h1
             className="font-georgia"
@@ -37,27 +38,51 @@ export default async function LibraryPage() {
             Library
           </h1>
 
-          {/* "+" button — per D-05, D-06, UI-SPEC: 48×48px, aged gold #D4AF37, 2px black border, navigates to /library/add */}
-          <Link
-            href="/library/add"
-            aria-label="Add a new book"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '48px',
-              height: '48px',
-              backgroundColor: '#D4AF37',
-              border: '2px solid #000000',
-              cursor: 'pointer',
-              fontSize: '24px',
-              color: '#2C2C2C',
-              textDecoration: 'none',
-              flexShrink: 0,
-            }}
-          >
-            +
-          </Link>
+          {/* Right-side controls: wishlist link + add + sign out */}
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'center' }}>
+            {/* Heart icon → wishlist (matches Flutter LibraryScreen action) */}
+            <Link
+              href="/wishlist"
+              aria-label="Go to wishlist"
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                width: '48px', height: '48px',
+                backgroundColor: 'transparent',
+                border: '2px solid #000000',
+                cursor: 'pointer',
+                fontSize: '20px',
+                color: '#222222',
+                textDecoration: 'none',
+                flexShrink: 0,
+              }}
+            >
+              ♡
+            </Link>
+
+            {/* "+" button — per D-05, D-06, UI-SPEC: 48×48px, aged gold #D4AF37, 2px black border, navigates to /library/add */}
+            <Link
+              href="/library/add"
+              aria-label="Add a new book"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '48px',
+                height: '48px',
+                backgroundColor: '#D4AF37',
+                border: '2px solid #000000',
+                cursor: 'pointer',
+                fontSize: '24px',
+                color: '#2C2C2C',
+                textDecoration: 'none',
+                flexShrink: 0,
+              }}
+            >
+              +
+            </Link>
+
+            <SignOutButton />
+          </div>
         </div>
 
         {/* Shelf — client component handles drag + tap */}
