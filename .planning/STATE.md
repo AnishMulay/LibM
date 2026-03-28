@@ -94,8 +94,14 @@ None yet.
 
 None yet.
 
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260328-okc | Fix 400 Bad Request on Supabase books insert - missing user_id and cover_color type mismatch | 2026-03-28 | 272198f | [260328-okc-fix-400-bad-request-on-supabase-books-in](./quick/260328-okc-fix-400-bad-request-on-supabase-books-in/) |
+
 ## Session Continuity
 
-Last session: 2026-03-27T01:54:58.581Z
-Stopped at: Completed 07-01-PLAN.md
+Last session: 2026-03-28
+Stopped at: Completed quick task 260328-okc: Fix 400 Bad Request on Supabase books insert - missing user_id and cover_color type mismatch
 Resume file: None
