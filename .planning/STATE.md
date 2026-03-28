@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
 status: Milestone complete
-stopped_at: Completed 07-01-PLAN.md
-last_updated: "2026-03-27T01:58:13.143Z"
+stopped_at: "Completed quick task 260328-or6: Full feature parity audit — cache revalidation, wishlist nav, sign-out, cover colors, notes display, wishlist empty state"
+last_updated: "2026-03-28T22:03:26.953Z"
 progress:
   total_phases: 4
   completed_phases: 4
@@ -85,6 +85,10 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 07-wishlist-book-detail]: WishlistShelf is a thin 'use client' wrapper — Server Component owns fetch and UID gate
 - [Phase 07-wishlist-book-detail]: Silent asymmetry: showAddButton=false renders nothing — no disabled state (D-06)
 - [Phase 07-wishlist-book-detail]: Wishlist books ordered by created_at ascending (D-01) vs library's position-based drag order
+
+### Roadmap Evolution
+
+- Phase 8 added: 8
 
 ### Pending Todos
 

@@ -2,17 +2,17 @@
 
 ## Milestones
 
-- ✅ **v1.0 MVP** — Phases 1–3 (shipped 2026-03-23)
+- ✅ **v1.0 MVP** — Phases 1–3 (shipped 2008-03-23)
 - 🚧 **v2.0 Next.js Rebuild** — Phases 4–7 (in progress)
 
 ## Phases
 
 <details>
-<summary>✅ v1.0 MVP (Phases 1–3) — SHIPPED 2026-03-23</summary>
+<summary>✅ v1.0 MVP (Phases 1–3) — SHIPPED 2008-03-23</summary>
 
-- [x] Phase 1: Auth (2/2 plans) — completed 2026-03-22
-- [x] Phase 2: Library (4/4 plans) — completed 2026-03-23
-- [x] Phase 3: Wishlist & Detail (4/4 plans) — completed 2026-03-23
+- [x] Phase 1: Auth (2/2 plans) — completed 2008-03-22
+- [x] Phase 2: Library (4/4 plans) — completed 2008-03-23
+- [x] Phase 3: Wishlist & Detail (4/4 plans) — completed 2008-03-23
 
 Full phase details: `.planning/milestones/v1.0-ROADMAP.md`
 
@@ -22,7 +22,7 @@ Full phase details: `.planning/milestones/v1.0-ROADMAP.md`
 
 **Milestone Goal:** Rebuild LibM as a Next.js 14 web app with exact feature parity to the Flutter v1.0 app, keeping the Supabase backend intact.
 
-- [x] **Phase 4: Setup & Auth** - Next.js scaffold, Supabase client, login page, and route protection (completed 2026-03-25)
+- [x] **Phase 4: Setup & Auth** - Next.js scaffold, Supabase client, login page, and route protection (completed 2008-03-25)
 - [ ] **Phase 5: Bookshelf UI Components** - Shared wooden shelf visual, book spine component, and old-money theme
 - [ ] **Phase 6: Library + Add Book** - Library route with drag reorder and full add-book form
 - [ ] **Phase 7: Wishlist + Book Detail** - Wishlist screen, book detail view, and move-to-library action
@@ -106,10 +106,10 @@ Plans:
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
-| 1. Auth | v1.0 | 2/2 | Complete | 2026-03-22 |
-| 2. Library | v1.0 | 4/4 | Complete | 2026-03-23 |
-| 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2026-03-23 |
-| 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2026-03-25 |
+| 1. Auth | v1.0 | 2/2 | Complete | 2008-03-22 |
+| 2. Library | v1.0 | 4/4 | Complete | 2008-03-23 |
+| 3. Wishlist & Detail | v1.0 | 4/4 | Complete | 2008-03-23 |
+| 4. Setup & Auth | v2.0 | 3/3 | Complete   | 2008-03-25 |
 | 5. Bookshelf UI Components | v2.0 | 1/2 | In Progress|  |
 | 6. Library + Add Book | v2.0 | 3/4 | In Progress|  |
 | 7. Wishlist + Book Detail | v2.0 | 2/3 | In Progress|  |
