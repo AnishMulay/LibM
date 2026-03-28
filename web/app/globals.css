@@ -11,9 +11,12 @@
   --color-text-secondary: #666666;
   --color-border: #000000;
   /* Wood tones — bookshelf gradient (Phase 5) */
-  --color-wood-light: #8B6F47;
-  --color-wood-mid:   #6B5438;
-  --color-wood-dark:  #4A3728;
+  /* Flutter AppColors: shelfWoodLight, shelfWoodDark, shelfLip (2-stop gradient, no mid) */
+  --color-wood-light: #C8A06E;
+  --color-wood-dark:  #8B5E3C;
+  --color-wood-lip:   #4A2E1A;
+  /* Cover swatches */
+  --color-aged-gold:  #D4AF6A;
 
   /* Spacing tokens */
   --space-xs: 4px;
