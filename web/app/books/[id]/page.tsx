@@ -94,21 +94,23 @@ export default async function BookDetailPage({ params }: BookDetailPageProps) {
             }}
           />
 
-          {/* Notes — read-only, 14px body weight — per UI-SPEC, D-09 */}
-          <div>
-            <p
-              className="font-georgia"
-              style={{ fontSize: '14px', lineHeight: '1.4', color: '#666666', marginBottom: '8px' }}
-            >
-              Notes
-            </p>
-            <p
-              className="font-georgia"
-              style={{ fontSize: '14px', lineHeight: '1.5', color: '#222222' }}
-            >
-              {book.notes ?? 'No notes'}
-            </p>
-          </div>
+          {/* Notes — read-only, hidden entirely if null/empty (matches Flutter `if (book.notes != null && book.notes!.isNotEmpty)`) */}
+          {book.notes && book.notes.trim().length > 0 && (
+            <div>
+              <p
+                className="font-georgia"
+                style={{ fontSize: '14px', lineHeight: '1.4', color: '#666666', marginBottom: '8px' }}
+              >
+                Notes
+              </p>
+              <p
+                className="font-georgia"
+                style={{ fontSize: '14px', lineHeight: '1.5', color: '#222222' }}
+              >
+                {book.notes}
+              </p>
+            </div>
+          )}
 
           {/* Move to Library — visible only for wishlist books (D-11, DETAIL-02) */}
           {book.isWishlist && <MoveToLibraryButton bookId={book.id} />}
