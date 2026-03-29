@@ -58,7 +58,7 @@ export default async function LibraryPage() {
               ♡
             </Link>
 
-            {/* "+" button — per D-05, D-06, UI-SPEC: 48×48px, aged gold #D4AF37, 2px black border, navigates to /library/add */}
+            {/* "+" button — per D-05, D-06, UI-SPEC: 48×48px, aged gold #D4AF6A, 2px black border, navigates to /library/add */}
             <Link
               href="/library/add"
               aria-label="Add a new book"

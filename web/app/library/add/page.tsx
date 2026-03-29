@@ -114,7 +114,7 @@ export default function AddBookPage() {
         {/* Page heading */}
         <h1
           className="font-georgia mb-xl"
-          style={{ fontSize: '48px', fontWeight: 700, lineHeight: '1.0', color: '#222222' }}
+          style={{ fontSize: '32px', fontWeight: 700, lineHeight: '1.0', color: '#222222' }}
         >
           Add Book
         </h1>
@@ -168,7 +168,7 @@ export default function AddBookPage() {
                 color: '#222222',
                 outline: 'none',
               }}
-              onFocus={(e) => { if (!titleError) e.target.style.border = '2px solid #D4AF37' }}
+              onFocus={(e) => { if (!titleError) e.target.style.border = '2px solid #2D4A3E' }}
               onBlur={(e)  => { if (!titleError) e.target.style.border = '2px solid #000000' }}
             />
           </div>
@@ -208,7 +208,7 @@ export default function AddBookPage() {
                 color: '#222222',
                 outline: 'none',
               }}
-              onFocus={(e) => { if (!authorError) e.target.style.border = '2px solid #D4AF37' }}
+              onFocus={(e) => { if (!authorError) e.target.style.border = '2px solid #2D4A3E' }}
               onBlur={(e)  => { if (!authorError) e.target.style.border = '2px solid #000000' }}
             />
           </div>
@@ -251,11 +251,9 @@ export default function AddBookPage() {
                     width: '56px',
                     height: '56px',
                     backgroundColor: hex,
-                    // Selected: 2px gold border (#D4AF37); unselected: 2px black border (#000000) — per UI-SPEC
-                    border: coverColor === hex ? '2px solid #D4AF37' : '2px solid #000000',
+                    // Selected: 3px solid black; unselected: 1px rgba — per Flutter ColorPickerWidget
+                    border: coverColor === hex ? '3px solid #000000' : '1px solid rgba(0, 0, 0, 0.1)',
                     cursor: 'pointer',
-                    outline: coverColor === hex ? '2px solid #D4AF37' : 'none',
-                    outlineOffset: '2px',
                   }}
                 />
               ))}
@@ -287,7 +285,7 @@ export default function AddBookPage() {
                 minHeight: '52px',
                 outline: 'none',
               }}
-              onFocus={(e) => { e.target.style.border = '2px solid #D4AF37' }}
+              onFocus={(e) => { e.target.style.border = '2px solid #2D4A3E' }}
               onBlur={(e)  => { e.target.style.border = '2px solid #000000' }}
             />
           </div>
@@ -303,11 +301,11 @@ export default function AddBookPage() {
               style={{
                 flex: 1,
                 height: '52px',
-                backgroundColor: saving ? 'rgba(212, 175, 55, 0.5)' : '#D4AF37',
+                backgroundColor: saving ? 'rgba(45, 74, 62, 0.5)' : '#2D4A3E',
                 border: '2px solid #000000',
                 fontSize: '16px',
                 lineHeight: '1.5',
-                color: '#222222',
+                color: '#FFFFFF',
                 cursor: saving ? 'not-allowed' : 'pointer',
                 letterSpacing: '1px',
                 opacity: saving ? 0.5 : 1,
