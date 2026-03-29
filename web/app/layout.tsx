@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'LibM',
-  description: 'Your shared shelf',
+  description: 'your shared shelf',
 }
 
 export default function RootLayout({
@@ -13,9 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-parchment font-georgia text-text-primary">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

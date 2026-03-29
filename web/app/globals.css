@@ -3,49 +3,429 @@
 @tailwind utilities;
 
 :root {
-  /* Color tokens */
-  --color-parchment: #F5F0E8;
-  --color-forest-green: #2D4A3E;
-  --color-dark-red: #8B1A1A;
-  --color-text-primary: #222222;
-  --color-text-secondary: #666666;
-  --color-border: #000000;
-  /* Wood tones — bookshelf gradient (Phase 5) */
-  /* Flutter AppColors: shelfWoodLight, shelfWoodDark, shelfLip (2-stop gradient, no mid) */
-  --color-wood-light: #C8A06E;
-  --color-wood-dark:  #8B5E3C;
-  --color-wood-lip:   #4A2E1A;
-  /* Cover swatches */
-  --color-aged-gold:  #D4AF6A;
-
-  /* Spacing tokens */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-
-  /* Input/button height */
-  --height-input: 52px;
+  --parchment: #f5f0e8;
+  --forest-green: #2d4a3e;
+  --dark-red: #8b1a1a;
+  --burgundy: #8b3a3a;
+  --border-default: rgba(0, 0, 0, 0.87);
+  --text-default: rgba(0, 0, 0, 0.87);
+  --text-muted: rgba(0, 0, 0, 0.54);
+  --shelf-wood-light: #c8a06e;
+  --shelf-wood-dark: #8b5e3c;
+  --shelf-lip: #4a2e1a;
 }
 
-/* Global resets for old-money neo-brutalist aesthetic */
 * {
-  border-radius: 0 !important;
   box-sizing: border-box;
+  border-radius: 0 !important;
 }
 
+html,
 body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--parchment);
+  color: var(--text-default);
   font-family: Georgia, 'Times New Roman', serif;
-  color: #222222;
-  background-color: #F5F0E8;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* Remove default input/button browser styling */
-input, button, textarea, select {
-  font-family: inherit;
-  border-radius: 0;
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.libm-screen {
+  min-height: 100vh;
+  background: var(--parchment);
+}
+
+.libm-login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.libm-login-scroll {
+  width: 100%;
+  padding: 48px 32px;
+}
+
+.libm-login-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.libm-display {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--text-default);
+}
+
+.libm-tagline {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: italic;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.libm-heading {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-default);
+}
+
+.libm-body-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-default);
+}
+
+.libm-label {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-default);
+}
+
+.libm-muted-label {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.libm-error-text {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--dark-red);
+}
+
+.libm-page-body {
+  padding: 16px;
+}
+
+.libm-app-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 0 8px;
+  background: var(--parchment);
+}
+
+.libm-app-bar-leading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 48px;
+}
+
+.libm-app-bar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.libm-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: transparent;
+  color: var(--text-default);
+  cursor: pointer;
+}
+
+.libm-icon-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.libm-icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.libm-center-state {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.libm-error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.libm-book-grid-scroll {
+  padding: 16px;
+}
+
+.libm-book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 4px;
+  row-gap: 32px;
+}
+
+.libm-sortable-book {
+  touch-action: none;
+  cursor: grab;
+}
+
+.libm-drag-overlay {
+  opacity: 0.75;
+}
+
+.libm-book-spine-button {
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.libm-book-spine {
+  position: relative;
+  width: 56px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.libm-book-spine-rotated {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 184px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  text-align: center;
+}
+
+.libm-book-spine-title,
+.libm-book-spine-author {
+  max-width: 168px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.libm-book-spine-title {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-default);
+}
+
+.libm-book-spine-author {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.libm-empty-shelf-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.libm-empty-shelf {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: linear-gradient(
+    to bottom,
+    var(--shelf-wood-light),
+    var(--shelf-wood-dark)
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+.libm-empty-shelf-lip {
+  height: 10px;
+  background: var(--shelf-lip);
+}
+
+.libm-field-wrap + .libm-field-wrap,
+.libm-field-wrap + .libm-color-picker,
+.libm-color-picker + .libm-field-wrap {
+  margin-top: 16px;
+}
+
+.libm-field {
+  position: relative;
+  border: 2px solid var(--border-default);
+  background: #ffffff;
+}
+
+.libm-field.is-focused {
+  border-color: var(--forest-green);
+}
+
+.libm-field-control {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text-default);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 24px 12px 8px;
+}
+
+.libm-field:not(.is-multiline) .libm-field-control {
+  min-height: 56px;
+}
+
+.libm-field.is-multiline .libm-field-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.libm-field-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  padding: 0 2px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-muted);
+  transform: translateY(-50%);
+  transform-origin: left top;
+  pointer-events: none;
+  transition:
+    top 120ms ease,
+    transform 120ms ease,
+    font-size 120ms ease,
+    color 120ms ease;
+}
+
+.libm-field.is-focused .libm-field-label {
+  color: var(--forest-green);
+}
+
+.libm-field-label.is-floating {
+  top: 0;
+  font-size: 12px;
+  transform: translateY(-50%);
+}
+
+.libm-color-picker {
+  margin-top: 24px;
+}
+
+.libm-color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.libm-color-swatch {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+}
+
+.libm-color-swatch.is-selected {
+  border: 3px solid var(--border-default);
+}
+
+.libm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  border: 2px solid var(--border-default);
+  background: var(--forest-green);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.libm-button.is-burgundy {
+  background: var(--burgundy);
+}
+
+.libm-button:disabled {
+  cursor: default;
+}
+
+.libm-spinner {
+  display: inline-block;
+  border-style: solid;
+  border-radius: 999px !important;
+  animation: libm-spin 0.9s linear infinite;
+}
+
+.libm-form {
+  margin-top: 48px;
+}
+
+.libm-inline-error {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--dark-red);
+}
+
+.libm-detail-scroll {
+  padding: 0 16px 24px;
+}
+
+.libm-cover-block {
+  width: 120px;
+  height: 160px;
+  margin: 0 auto;
+  border: 2px solid var(--border-default);
+}
+
+.libm-detail-notes {
+  margin-top: 16px;
+}
+
+@keyframes libm-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

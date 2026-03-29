@@ -29,8 +29,8 @@ export function LoginForm() {
       return
     }
 
-    // Successful login — redirect to home (middleware protects other routes)
-    router.push('/')
+    // Successful login — land on the authenticated library view
+    router.push('/library')
     router.refresh()
   }
 

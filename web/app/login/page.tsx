@@ -1,9 +1,5 @@
-import { LoginForm } from './LoginForm'
+import LoginScreen from '@/components/libm/screens/LoginScreen'
 
 export default function LoginPage() {
-  return (
-    <main className="min-h-screen bg-parchment flex items-center justify-center px-xl">
-      <LoginForm />
-    </main>
-  )
+  return <LoginScreen />
 }

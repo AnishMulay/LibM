@@ -1,5 +1,11 @@
-export default function Home() {
-  // This route will be protected by middleware (Plan 03)
-  // For now, render nothing — middleware will redirect unauthenticated users to /login
-  return null
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+
+export default async function RootPage() {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  redirect(user ? '/home' : '/login')
 }
