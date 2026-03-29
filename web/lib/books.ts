@@ -85,6 +85,44 @@ export async function addBook(options: {
   return bookRowToBook(data as BookRow)
 }
 
+export async function updateBook(options: {
+  id: string
+  title: string
+  author: string
+  coverColor: string
+  notes?: string | null
+}) {
+  const supabase = createClient()
+  const payload = {
+    title: options.title.trim(),
+    author: options.author.trim(),
+    cover_color: options.coverColor,
+    notes: options.notes?.trim() ? options.notes.trim() : null,
+  }
+
+  const { data, error } = await supabase
+    .from('books')
+    .update(payload)
+    .eq('id', options.id)
+    .select('*')
+    .single()
+
+  if (error) {
+    throw error
+  }
+
+  return bookRowToBook(data as BookRow)
+}
+
+export async function deleteBook(bookId: string) {
+  const supabase = createClient()
+  const { error } = await supabase.from('books').delete().eq('id', bookId)
+
+  if (error) {
+    throw error
+  }
+}
+
 export async function updatePositions(orderedIds: string[]) {
   const supabase = createClient()
   const updates = orderedIds.map((id, index) => ({
@@ -100,21 +138,35 @@ export async function updatePositions(orderedIds: string[]) {
 }
 
 export async function moveToLibrary(bookId: string) {
+  return moveBookToShelf(bookId, false)
+}
+
+export async function moveToWishlist(bookId: string) {
+  return moveBookToShelf(bookId, true)
+}
+
+async function moveBookToShelf(bookId: string, isWishlist: boolean) {
   const supabase = createClient()
-  const shelfBooks = await fetchLibraryBooks()
+  const shelfBooks = isWishlist
+    ? await fetchWishlistBooks()
+    : await fetchLibraryBooks()
   const nextPosition =
     shelfBooks.length === 0
       ? 0
       : shelfBooks[shelfBooks.length - 1].position + 1
 
-  const { error } = await supabase
+  const { data, error } = await supabase
     .from('books')
-    .update({ is_wishlist: false, position: nextPosition })
+    .update({ is_wishlist: isWishlist, position: nextPosition })
     .eq('id', bookId)
+    .select('*')
+    .single()
 
   if (error) {
     throw error
   }
+
+  return bookRowToBook(data as BookRow)
 }
 
 export async function getSignedInUserId() {

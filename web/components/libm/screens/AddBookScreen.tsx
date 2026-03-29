@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { addBook } from '@/lib/books'
+import { addBook, updateBook } from '@/lib/books'
+import { setShelfFeedback } from '@/lib/flash-feedback'
 import { COVER_SWATCHES } from '@/lib/libm'
+import type { Book } from '@/types/book'
 import AppBar from '@/components/libm/AppBar'
 import ColorPicker from '@/components/libm/ColorPicker'
 import IconButton from '@/components/libm/IconButton'
@@ -11,24 +13,39 @@ import { BackIcon } from '@/components/libm/Icons'
 import PrimaryButton from '@/components/libm/PrimaryButton'
 import TextField from '@/components/libm/TextField'
 
-export default function AddBookScreen({ isWishlist }: { isWishlist: boolean }) {
+export default function AddBookScreen({
+  isWishlist,
+  initialBook,
+}: {
+  isWishlist: boolean
+  initialBook?: Book
+}) {
   const router = useRouter()
-  const [title, setTitle] = useState('')
-  const [author, setAuthor] = useState('')
-  const [notes, setNotes] = useState('')
-  const [selectedColor, setSelectedColor] = useState<string>(COVER_SWATCHES[1])
+  const shelfIsWishlist = initialBook?.isWishlist ?? isWishlist
+  const isEditing = Boolean(initialBook)
+  const [title, setTitle] = useState(initialBook?.title ?? '')
+  const [author, setAuthor] = useState(initialBook?.author ?? '')
+  const [notes, setNotes] = useState(initialBook?.notes ?? '')
+  const [selectedColor, setSelectedColor] = useState<string>(
+    initialBook?.coverColor ?? COVER_SWATCHES[1],
+  )
   const [loading, setLoading] = useState(false)
   const [titleError, setTitleError] = useState<string | null>(null)
   const [authorError, setAuthorError] = useState<string | null>(null)
   const [saveError, setSaveError] = useState<string | null>(null)
 
   function goBack() {
+    if (isEditing && initialBook) {
+      router.push(`/book-detail?id=${initialBook.id}`)
+      return
+    }
+
     if (window.history.length > 1) {
       router.back()
       return
     }
 
-    router.push(isWishlist ? '/wishlist' : '/home')
+    router.push(shelfIsWishlist ? '/wishlist' : '/home')
   }
 
   async function handleSave() {
@@ -52,14 +69,34 @@ export default function AddBookScreen({ isWishlist }: { isWishlist: boolean }) {
     setLoading(true)
 
     try {
-      await addBook({
+      if (initialBook) {
+        const updatedBook = await updateBook({
+          id: initialBook.id,
+          title,
+          author,
+          coverColor: selectedColor,
+          notes,
+        })
+        router.push(`/book-detail?id=${updatedBook.id}`)
+        return
+      }
+
+      const newBook = await addBook({
         title,
         author,
         coverColor: selectedColor,
         notes,
-        isWishlist,
+        isWishlist: shelfIsWishlist,
       })
-      goBack()
+
+      setShelfFeedback({
+        shelf: shelfIsWishlist ? 'wishlist' : 'library',
+        toast: shelfIsWishlist
+          ? 'Book added to your Wishlist'
+          : 'Book added to your Library',
+        highlightBookId: newBook.id,
+      })
+      router.push(shelfIsWishlist ? '/wishlist' : '/home')
     } catch {
       setSaveError('Error saving book. Please try again.')
       setLoading(false)
@@ -69,7 +106,13 @@ export default function AddBookScreen({ isWishlist }: { isWishlist: boolean }) {
   return (
     <main className="libm-screen">
       <AppBar
-        title={isWishlist ? 'Add to Wishlist' : 'Add Book'}
+        title={
+          isEditing
+            ? 'Edit Book'
+            : shelfIsWishlist
+              ? 'Add to Wishlist'
+              : 'Add Book'
+        }
         leading={
           <IconButton label="Back" onClick={goBack}>
             <BackIcon />
@@ -99,8 +142,13 @@ export default function AddBookScreen({ isWishlist }: { isWishlist: boolean }) {
           </p>
         ) : null}
         <div style={{ marginTop: 24 }}>
-          <PrimaryButton type="button" loading={loading} onClick={() => void handleSave()}>
-            Save Book
+          <PrimaryButton
+            type="button"
+            loading={loading}
+            loadingText={isEditing ? 'Saving...' : 'Adding...'}
+            onClick={() => void handleSave()}
+          >
+            {isEditing ? 'Save Changes' : 'Save Book'}
           </PrimaryButton>
         </div>
       </div>

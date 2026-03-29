@@ -52,7 +52,7 @@ export default function MoveToLibraryButton({ bookId }: MoveToLibraryButtonProps
     <div style={{ marginTop: '32px' }}>
       {moveError && (
         <p
-          className="font-georgia"
+          className="font-ui"
           style={{
             color: '#8B1A1A',
             fontSize: '13px',
@@ -68,7 +68,7 @@ export default function MoveToLibraryButton({ bookId }: MoveToLibraryButtonProps
         type="button"
         onClick={handleMove}
         disabled={moving}
-        className="font-georgia"
+        className="font-ui"
         style={{
           display: 'block',
           width: '100%',

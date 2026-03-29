@@ -39,13 +39,13 @@ export function LoginForm() {
       {/* App name and tagline */}
       <div className="mb-2xl text-center">
         <h1
-          className="font-georgia font-bold text-text-primary"
+          className="font-editorial font-bold text-text-primary"
           style={{ fontSize: '48px', lineHeight: '1.0', letterSpacing: '2px' }}
         >
           LibM
         </h1>
         <p
-          className="font-georgia italic text-text-secondary mt-sm"
+          className="font-ui italic text-text-secondary mt-sm"
           style={{ fontSize: '14px', lineHeight: '1.4' }}
         >
           your shared shelf
@@ -57,7 +57,7 @@ export function LoginForm() {
         <div className="mb-md">
           <label
             htmlFor="email"
-            className="block font-georgia text-body text-text-primary mb-sm"
+            className="block font-ui text-body text-text-primary mb-sm"
           >
             Email
           </label>
@@ -68,7 +68,7 @@ export function LoginForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             autoComplete="email"
-            className="w-full h-input bg-white border-2 border-border px-md font-georgia text-body text-text-primary focus:outline-none focus:border-forest-green"
+            className="w-full h-input bg-white border-2 border-border px-md font-ui text-body text-text-primary focus:outline-none focus:border-forest-green"
             disabled={loading}
           />
         </div>
@@ -77,7 +77,7 @@ export function LoginForm() {
         <div className="mb-md">
           <label
             htmlFor="password"
-            className="block font-georgia text-body text-text-primary mb-sm"
+            className="block font-ui text-body text-text-primary mb-sm"
           >
             Password
           </label>
@@ -88,7 +88,7 @@ export function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
             required
             autoComplete="current-password"
-            className="w-full h-input bg-white border-2 border-border px-md font-georgia text-body text-text-primary focus:outline-none focus:border-forest-green"
+            className="w-full h-input bg-white border-2 border-border px-md font-ui text-body text-text-primary focus:outline-none focus:border-forest-green"
             disabled={loading}
           />
         </div>
@@ -96,7 +96,7 @@ export function LoginForm() {
         {/* Error message — shown below password, above button (per UI-SPEC) */}
         {error && (
           <p
-            className="font-georgia text-dark-red py-xs"
+            className="font-ui text-dark-red py-xs"
             style={{ fontSize: '13px', lineHeight: '1.4' }}
             role="alert"
           >
@@ -108,7 +108,7 @@ export function LoginForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full h-input bg-forest-green border-2 border-border text-white font-georgia font-bold flex items-center justify-center disabled:cursor-not-allowed hover:bg-[#1f3329] transition-colors"
+          className="w-full h-input bg-forest-green border-2 border-border text-white font-ui font-bold flex items-center justify-center disabled:cursor-not-allowed hover:bg-[#1f3329] transition-colors"
           style={{ fontSize: '16px', letterSpacing: '1px' }}
         >
           {loading ? (

@@ -6,6 +6,32 @@ import { createClient } from '@/lib/supabase/client'
 import PrimaryButton from '@/components/libm/PrimaryButton'
 import TextField from '@/components/libm/TextField'
 
+function getLoginErrorMessage(message: string) {
+  const normalized = message.toLowerCase()
+
+  if (normalized.includes('user not found') || normalized.includes('email not found')) {
+    return "We don't recognise that email."
+  }
+
+  if (normalized.includes('invalid password') || normalized.includes('incorrect password')) {
+    return 'Incorrect password. Please try again.'
+  }
+
+  if (
+    normalized.includes('network') ||
+    normalized.includes('fetch failed') ||
+    normalized.includes('failed to fetch')
+  ) {
+    return 'Something went wrong. Please check your connection and try again.'
+  }
+
+  if (normalized.includes('invalid login credentials')) {
+    return "That email or password didn't match an invited account. Please try again."
+  }
+
+  return 'Unable to sign in right now. Please try again.'
+}
+
 export default function LoginScreen() {
   const router = useRouter()
   const [email, setEmail] = useState('')
@@ -25,7 +51,7 @@ export default function LoginScreen() {
     })
 
     if (error) {
-      setErrorMessage(error.message)
+      setErrorMessage(getLoginErrorMessage(error.message))
       setLoading(false)
       return
     }
@@ -59,9 +85,17 @@ export default function LoginScreen() {
               spellCheck={false}
               disabled={loading}
             />
-            {errorMessage ? <p className="libm-inline-error">{errorMessage}</p> : null}
+            {errorMessage ? (
+              <>
+                <p className="libm-inline-error">{errorMessage}</p>
+                <p className="libm-help-note">
+                  Having trouble? This app is private. Make sure you&apos;re using
+                  your invited account.
+                </p>
+              </>
+            ) : null}
             <div style={{ marginTop: 24 }}>
-              <PrimaryButton type="submit" loading={loading}>
+              <PrimaryButton type="submit" loading={loading} loadingText="Signing in...">
                 SIGN IN
               </PrimaryButton>
             </div>

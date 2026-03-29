@@ -27,7 +27,8 @@ const config: Config = {
         'aged-gold':  '#D4AF6A',   // Flutter coverSwatches[4]
       },
       fontFamily: {
-        georgia: ['Georgia', "'Times New Roman'", 'serif'],
+        editorial: ['var(--font-heading)', 'serif'],
+        ui: ['var(--font-body)', 'sans-serif'],
       },
       borderRadius: {
         // Override ALL border radius to 0 — no rounded corners anywhere

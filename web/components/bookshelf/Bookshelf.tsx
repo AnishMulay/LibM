@@ -20,8 +20,8 @@ export function Bookshelf({ books }: BookshelfProps) {
       >
         {books.length === 0 ? (
           <div className="w-full flex flex-col items-center justify-center py-xl">
-            <p className="text-body font-georgia text-text-secondary">Add your first book</p>
-            <p className="text-subtitle font-georgia text-text-secondary mt-sm">
+            <p className="text-body font-editorial text-text-secondary">Add your first book</p>
+            <p className="text-subtitle font-ui text-text-secondary mt-sm">
               No books yet. Tap the + button to add one.
             </p>
           </div>

@@ -140,7 +140,7 @@ export default function LibraryShelf({ initialBooks }: LibraryShelfProps) {
     <>
       {saveError && (
         <p
-          style={{ color: '#8B1A1A', fontSize: '13px', lineHeight: '1.4', marginBottom: '8px', fontFamily: 'Georgia, serif' }}
+          style={{ color: '#8B1A1A', fontSize: '13px', lineHeight: '1.4', marginBottom: '8px', fontFamily: 'var(--font-body), sans-serif' }}
         >
           {saveError}
         </p>
@@ -170,10 +170,10 @@ export default function LibraryShelf({ initialBooks }: LibraryShelfProps) {
             >
               {books.length === 0 ? (
                 <div className="w-full flex flex-col items-center justify-center py-xl">
-                  <p className="font-georgia" style={{ color: '#666666', fontSize: '16px' }}>
+                  <p className="font-editorial" style={{ color: '#666666', fontSize: '16px' }}>
                     Add your first book
                   </p>
-                  <p className="font-georgia mt-sm" style={{ color: '#666666', fontSize: '14px' }}>
+                  <p className="font-ui mt-sm" style={{ color: '#666666', fontSize: '14px' }}>
                     No books yet. Tap the + button to add one.
                   </p>
                 </div>

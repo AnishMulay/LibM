@@ -18,7 +18,7 @@ export default function SignOutButton() {
       type="button"
       onClick={handleSignOut}
       aria-label="Sign out"
-      className="font-georgia"
+      className="font-ui"
       style={{
         display: 'flex',
         alignItems: 'center',
