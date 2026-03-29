@@ -28,11 +28,10 @@ export default async function LibraryPage() {
           <h1
             className="font-georgia"
             style={{
-              fontSize: '48px',
+              fontSize: '32px',
               fontWeight: 700,
               lineHeight: '1.0',
               color: '#222222',
-              letterSpacing: '2px',
             }}
           >
             Library
@@ -69,7 +68,7 @@ export default async function LibraryPage() {
                 justifyContent: 'center',
                 width: '48px',
                 height: '48px',
-                backgroundColor: '#D4AF37',
+                backgroundColor: '#D4AF6A',
                 border: '2px solid #000000',
                 cursor: 'pointer',
                 fontSize: '24px',
