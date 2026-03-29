@@ -22,7 +22,7 @@ export default function WishlistShelf({ books, showAddButton }: WishlistShelfPro
     <div>
       {/* Header row: "Wishlist" heading + optional "+" button + sign-out */}
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: '32px' }}>
-        <h1 className="font-georgia" style={{ fontSize: '48px', fontWeight: 700, lineHeight: '1.0', color: '#222222', letterSpacing: '2px' }}>
+        <h1 className="font-georgia" style={{ fontSize: '32px', fontWeight: 700, lineHeight: '1.0', color: '#222222', letterSpacing: '2px' }}>
           Wishlist
         </h1>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'center' }}>
@@ -33,7 +33,7 @@ export default function WishlistShelf({ books, showAddButton }: WishlistShelfPro
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 width: '48px', height: '48px',
-                backgroundColor: '#D4AF37',
+                backgroundColor: '#D4AF6A',
                 border: '2px solid #000000',
                 cursor: 'pointer',
                 fontSize: '24px',
@@ -51,10 +51,11 @@ export default function WishlistShelf({ books, showAddButton }: WishlistShelfPro
       {booksWithTap.length === 0 ? (
         <div
           style={{
-            background: 'linear-gradient(to bottom, #8B6F47 0%, #6B5438 50%, #4A3728 100%)',
-            borderBottom: '14px solid #4A3728',
+            background: 'linear-gradient(to bottom, #C8A06E 0%, #8B5E3C 100%)',
+            borderBottom: '10px solid #4A2E1A',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.26)',
             padding: '8px',
-            minHeight: '166px',
+            minHeight: '208px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
