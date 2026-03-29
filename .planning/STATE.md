@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Next.js Rebuild
-status: Milestone complete
-stopped_at: "Completed quick task 260328-or6: Full feature parity audit — cache revalidation, wishlist nav, sign-out, cover colors, notes display, wishlist empty state"
-last_updated: "2026-03-28T22:03:26.953Z"
+status: Ready to execute
+stopped_at: "Completed 08-04: Library heading, add button, and add book form UI corrections"
+last_updated: "2026-03-29T00:05:16.090Z"
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 4
-  total_plans: 12
-  completed_plans: 12
+  total_plans: 16
+  completed_plans: 15
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-25)
 
 **Core value:** She adds books she wants; he sees the wishlist, buys them, ships them, and moves them to the shelf — the app is the connective tissue of their shared reading life across distance.
-**Current focus:** Phase 07 — wishlist-book-detail
+**Current focus:** Phase 08 — ui-faithful-port
 
 ## Current Position
 
-Phase: 07
-Plan: Not started
+Phase: 08 (ui-faithful-port) — EXECUTING
+Plan: 3 of 4
 
 ## Performance Metrics
 
@@ -54,6 +54,10 @@ Plan: Not started
 | Phase 07-wishlist-book-detail P02 | 2min | 1 tasks | 1 files |
 | Phase 07-wishlist-book-detail P03 | 1min | 2 tasks | 2 files |
 | Phase 07-wishlist-book-detail P01 | 2min | 2 tasks | 3 files |
+| Phase 08 P02 | 3min | 1 tasks | 1 files |
+| Phase 08-ui-faithful-port P01 | 41s | 2 tasks | 2 files |
+| Phase 08-ui-faithful-port P03 | 63s | 3 tasks | 3 files |
+| Phase 08 P04 | 94s | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -85,10 +89,21 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 07-wishlist-book-detail]: WishlistShelf is a thin 'use client' wrapper — Server Component owns fetch and UID gate
 - [Phase 07-wishlist-book-detail]: Silent asymmetry: showAddButton=false renders nothing — no disabled state (D-06)
 - [Phase 07-wishlist-book-detail]: Wishlist books ordered by created_at ascending (D-01) vs library's position-based drag order
+- [Phase 08-02]: BookSpine height corrected to 200px matching Flutter SizedBox(height: 200)
+- [Phase 08-02]: Both title and author use 14px Georgia per AppTextStyles.spineTitle/spineAuthor
+- [Phase 08-02]: Author opacity 0.85 removed — Flutter renders author at full opacity
+- [Phase 08-ui-faithful-port]: wood-mid token removed — Flutter ShelfWidget uses 2-stop gradient (light→dark), no mid stop
+- [Phase 08-ui-faithful-port]: aged-gold (#D4AF6A) added from Flutter coverSwatches[4] — all wood/gold tokens now match Flutter AppColors exactly
+- [Phase 08-ui-faithful-port]: 2-stop shelf gradient #C8A06E → #8B5E3C matches Flutter ShelfWidget.dart exactly
+- [Phase 08-ui-faithful-port]: Shelf lip corrected to 10px solid #4A2E1A per Flutter AppColors.shelfLip
+- [Phase 08-ui-faithful-port]: WishlistShelf heading 32px, add button #D4AF6A (Aged Gold) — both corrected from wrong values
+- [Phase 08-04]: Library heading letterSpacing removed — Flutter AppTextStyles.heading has no letter spacing (only display/app-name has letterSpacing: 2px)
+- [Phase 08-04]: Save button text color set to #FFFFFF — forest green #2D4A3E background requires white text for WCAG contrast (was #222222 dark)
+- [Phase 08-04]: Swatch outline/outlineOffset removed — Flutter ColorPickerWidget uses only border, not CSS outline
 
 ### Roadmap Evolution
 
-- Phase 8 added: 8
+- Phase 8 added: UI Faithful Port — make the Next.js app look and navigate exactly like the Flutter Chrome app
 
 ### Pending Todos
 
@@ -107,6 +122,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-28
-Stopped at: Completed quick task 260328-or6: Full feature parity audit — cache revalidation, wishlist nav, sign-out, cover colors, notes display, wishlist empty state
+Last session: 2026-03-29T00:05:16.088Z
+Stopped at: Completed 08-04: Library heading, add button, and add book form UI corrections
 Resume file: None
