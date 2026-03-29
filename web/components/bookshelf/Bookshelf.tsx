@@ -10,11 +10,12 @@ export function Bookshelf({ books }: BookshelfProps) {
       <div
         className="flex flex-row flex-wrap items-end gap-0"
         style={{
-          background: 'linear-gradient(to bottom, #8B6F47 0%, #6B5438 50%, #4A3728 100%)',
-          borderBottom: '14px solid #4A3728',
+          background: 'linear-gradient(to bottom, #C8A06E 0%, #8B5E3C 100%)',
+          borderBottom: '10px solid #4A2E1A',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.26)',
           padding: '8px 8px 0 8px',
           rowGap: '8px',
-          minHeight: '166px',
+          minHeight: '208px',
         }}
       >
         {books.length === 0 ? (
