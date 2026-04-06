@@ -77,7 +77,7 @@ export default function AddBookScreen({
           coverColor: selectedColor,
           notes,
         })
-        router.push(`/book-detail?id=${updatedBook.id}`)
+        router.replace(`/book-detail?id=${updatedBook.id}`)
         return
       }
 
@@ -97,7 +97,8 @@ export default function AddBookScreen({
         highlightBookId: newBook.id,
       })
       router.push(shelfIsWishlist ? '/wishlist' : '/home')
-    } catch {
+    } catch (error) {
+      console.error('Failed to save book', error)
       setSaveError('Error saving book. Please try again.')
       setLoading(false)
     }

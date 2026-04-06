@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { consumeShelfFeedback } from '@/lib/flash-feedback'
 import { createClient } from '@/lib/supabase/client'
-import { fetchWishlistBooks, getSignedInUserId } from '@/lib/books'
-import { HER_UID } from '@/lib/libm'
+import { fetchWishlistBooks } from '@/lib/books'
 import type { Book } from '@/types/book'
 import EmptyShelf from '@/components/libm/EmptyShelf'
 import IconButton from '@/components/libm/IconButton'
@@ -21,7 +20,6 @@ export default function WishlistScreen() {
   const [books, setBooks] = useState<Book[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [isHer, setIsHer] = useState(false)
   const [toastMessage, setToastMessage] = useState<string | null>(null)
   const [highlightedBookId, setHighlightedBookId] = useState<string | null>(null)
 
@@ -47,12 +45,8 @@ export default function WishlistScreen() {
     setError(null)
 
     try {
-      const [nextBooks, currentUserId] = await Promise.all([
-        fetchWishlistBooks(),
-        getSignedInUserId(),
-      ])
+      const nextBooks = await fetchWishlistBooks()
       setBooks(nextBooks)
-      setIsHer(currentUserId === HER_UID)
       setLoading(false)
     } catch {
       setError('Error loading wishlist. Please try again.')
@@ -91,21 +85,12 @@ export default function WishlistScreen() {
     body = (
       <div className="libm-page-body">
         <EmptyShelf
-          title={isHer ? 'Your Wishlist is waiting' : 'Nothing on the wishlist yet'}
-          description={
-            isHer
-              ? 'Add the books you want so they are easy to spot the next time someone checks in.'
-              : "She hasn't added any books yet. Check back later to see what she wants next."
-          }
+          title="Your Wishlist is waiting"
+          description="Add the books you want so they are easy to spot the next time someone checks in."
           action={
-            isHer ? (
-              <PrimaryButton
-                type="button"
-                onClick={() => router.push('/add-book?wishlist=1')}
-              >
-                Add your first wishlist book
-              </PrimaryButton>
-            ) : undefined
+            <PrimaryButton type="button" onClick={() => router.push('/add-book?wishlist=1')}>
+              Add your first wishlist book
+            </PrimaryButton>
           }
         />
       </div>
@@ -127,14 +112,9 @@ export default function WishlistScreen() {
       <TopNavBar
         actions={
           <>
-            {isHer ? (
-              <IconButton
-                label="Add to Wishlist"
-                onClick={() => router.push('/add-book?wishlist=1')}
-              >
-                <PlusIcon />
-              </IconButton>
-            ) : null}
+            <IconButton label="Add to Wishlist" onClick={() => router.push('/add-book?wishlist=1')}>
+              <PlusIcon />
+            </IconButton>
             <IconButton label="Sign out" onClick={() => void handleSignOut()}>
               <LogoutIcon />
             </IconButton>

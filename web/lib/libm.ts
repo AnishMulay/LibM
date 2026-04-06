@@ -26,8 +26,6 @@ export const COVER_SWATCHES = [
   LIBM_COLORS.cream,
 ] as const
 
-export const HER_UID = '67981be5-832f-44d4-bd45-a8a331565891'
-
 export function normalizeHexColor(
   hex: string,
   fallback: string = LIBM_COLORS.parchment,

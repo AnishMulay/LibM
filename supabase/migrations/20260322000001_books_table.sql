@@ -4,8 +4,8 @@
 
 DO $$
 DECLARE
-  user_a_uid UUID := '67981be5-832f-44d4-bd45-a8a331565891'; -- REPLACE ME (same as migration 000000)
-  user_b_uid UUID := '4840af1a-7d60-4b0d-a3e2-a8c8ecfbfb7f'; -- REPLACE ME (same as migration 000000)
+  user_a_uid UUID := 'd05b0e9e-17a4-489b-a775-03fe3fbab83d'; -- Shruti
+  user_b_uid UUID := '67981be5-832f-44d4-bd45-a8a331565891'; -- Anish
 BEGIN
 
   -- Create books table

@@ -168,7 +168,3 @@ async function moveBookToShelf(bookId: string, isWishlist: boolean) {
 
   return bookRowToBook(data as BookRow)
 }
-
-export async function getSignedInUserId() {
-  return getCurrentUserId()
-}
